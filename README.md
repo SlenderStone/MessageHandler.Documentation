@@ -15,7 +15,7 @@ For simple changes the GitHub web UI should suffice.
  * Add a description of your changes
  * Click `Propose File Changes`
  
- ## Markdown
+## Markdown
 
 The pages are currently rendered using [MarkdownDeep](http://www.toptensoftware.com/markdowndeep/) with *Markdown Extra Enhancements* enabled. 
 
@@ -35,12 +35,12 @@ Ensure you enable *MarkdownDeep Extras* by going to
 
     Settings > markdown extra > toggle the switch to red
 	
-More info on Markdown see
+# More info on Markdown see
  
  * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
  * [Github Flavored Markdown](https://help.github.com/articles/github-flavored-markdown)
 
 # Additional Resources
 
-* [General GitHub documentation](http://help.github.com/)
-* [GitHub pull request documentation](http://help.github.com/send-pull-requests/)
+ * [General GitHub documentation](http://help.github.com/)
+ * [GitHub pull request documentation](http://help.github.com/send-pull-requests/)
