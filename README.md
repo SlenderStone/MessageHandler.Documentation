@@ -28,3 +28,9 @@ For editing markdown on your desktop using MarkdownDeep try the following
 Ensure you enable *MarkdownDeep Extras* by going to 
 
     Tools > Options > Markdown > Markdown Processor > Markdown (Extra)  
+	
+### [MarkPad](http://code52.org/DownmarkerWPF/) 
+
+Ensure you enable *MarkdownDeep Extras* by going to 
+
+    Settings > markdown extra > toggle the switch to red
