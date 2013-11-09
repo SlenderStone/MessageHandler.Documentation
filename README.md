@@ -22,3 +22,9 @@ The pages are currently rendered using [MarkdownDeep](http://www.toptensoftware.
 There are some slight difference between MarkdownDeep and the GitHub flavoured Markdown. So when changes are accepted you should double check how the rendered version looks.
 
 For editing markdown on your desktop using MarkdownDeep try the following
+
+### [MarkdownPad](http://markdownpad.com/)
+
+Ensure you enable *MarkdownDeep Extras* by going to 
+
+    Tools > Options > Markdown > Markdown Processor > Markdown (Extra)  
