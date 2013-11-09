@@ -14,3 +14,11 @@ For simple changes the GitHub web UI should suffice.
  * Make the changes you require. Ensure you verify your changes in the `Preview` tab
  * Add a description of your changes
  * Click `Propose File Changes`
+ 
+ ## Markdown
+
+The pages are currently rendered using [MarkdownDeep](http://www.toptensoftware.com/markdowndeep/) with *Markdown Extra Enhancements* enabled. 
+
+There are some slight difference between MarkdownDeep and the GitHub flavoured Markdown. So when changes are accepted you should double check how the rendered version looks.
+
+For editing markdown on your desktop using MarkdownDeep try the following
