@@ -1,3 +1,7 @@
+### General
+
+*  [How to contribute](/documentation/readme)
+
 ### Handlers
 
 *  [Generate Alert](/documentation/handlers/generate-alert)
