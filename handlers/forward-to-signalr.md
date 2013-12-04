@@ -1,6 +1,8 @@
 ## Forward to signalr
 
-Forwards a message to a signalr hub, called ChannelHub, hosted in the MessageHandler gateway. You can subscribe to this hub to receive
+Forwards a message to a signalr hub, called ChannelHub, hosted in the MessageHandler gateway. You can subscribe to this hub to receive messages that are traveling through the channel and satisfy certain condition.
+
+[Learn more about using the ChannelHub](http://#todo)
 
 ### Handler properties
 
