@@ -25,7 +25,7 @@ Once you have obtained a request code from the ACS, you can use this code to req
 
 To consume this flow in an easy way, you can make use of the excellent [Windows Azure Acs Oauth2 Client library](http://www.nuget.org/packages/WindowsAzure.Acs.Oauth2.client) which is an open source library written by one of our founders (before we decided to start this venture).
 
-All you need to do is fill in the secret values and the library will do the authentication and authorization dance for you.
+All you need to do is fill in the secret values and the library will do the authentication and authorization dance for you. (Ps: You can find these values on the connection details page in your account)
 
 	private void Authorize()
     {
