@@ -31,4 +31,4 @@ Persists a claimset returned from Windows Azure Access Control Service to table 
 
 **$type:** Type requirements will be removed in the future
 
-**datetime:** [ISO 8601 standard ](http://en.wikipedia.org/wiki/ISO_8601), f.e. 2012-03-19T07:22Z
+**datetime:** [ISO 8601 standard ](httcd\p://en.wikipedia.org/wiki/ISO_8601), f.e. 2012-03-19T07:22Z
