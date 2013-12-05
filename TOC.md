@@ -17,7 +17,7 @@
 *  [Generate Alert](/documentation/handlers/generate-alert)
 *  [Index Entity In Table Storage](/documentation/handlers/index-entity-in-table-storage)
 *  [Message To Blob Storage](/documentation/handlers/message-to-blob-storage)
-*  [Persist Claimset To Table Storage](/documentation/handlers/persist-claimset-to-table-storage)
+*  [Persist Claimset In Table Storage](/documentation/handlers/persist-claimset-in-tablestorage)
 *  [Persist Entity To Sql](/documentation/handlers/persist-entity-to-sql)
 *  [Perist Entity To Table Storage](/documentation/handlers/persist-entity-to-table-storage)
 *  [Route to Servicebus queue](/documentation/handlers/route-to-servicebus-queue)  
