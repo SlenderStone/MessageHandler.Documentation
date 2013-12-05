@@ -41,15 +41,15 @@ To publish a message to your channel, you invoke the `Publish` resource and pass
 
 If you want to listen for messages in the channel (assuming you have a signalr handler deployed in it), you can do so by registering a callback on the `ReceiveMessage` operation and than call the `Subscribe` operation to let the gateway know which channels and in which environment you are interested in.
 
-		 _channelHubProxy.On("ReceiveMessage", alert =>
-            {
-                dynamic msg = JObject.Parse(alert.Message.Value);
-                Console.WriteLine("Received alert: {0}, measured temperature {1}", alert.Trigger, msg.Temperature);
-            });
-           
-         hubConnection.Start(new LongPollingTransport()).Wait();
+	 _channelHubProxy.On("ReceiveMessage", alert =>
+        {
+            dynamic msg = JObject.Parse(alert.Message.Value);
+            Console.WriteLine("Received alert: {0}, measured temperature {1}", alert.Trigger, msg.Temperature);
+        });
+       
+     hubConnection.Start(new LongPollingTransport()).Wait();
 
-		_channelHubProxy.Invoke("Subscribe", Channel, Environment).Wait();
+	_channelHubProxy.Invoke("Subscribe", Channel, Environment).Wait();
 
 
  **Notes:** 
