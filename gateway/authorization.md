@@ -1,53 +1,89 @@
-## Authentication and authorization
+## Oauth 2.0 authentication
 
-This article describes how to authenticate against access control service and then authorize against the gateway authorization endpoint.
+Authentication and authorization is implemented using the OAuth 2.0 flow. [OAuth](http://tools.ietf.org/html/rfc6749) is an open protocol that allows secure authorization in a simple and standard method from web, mobile and desktop applications. Basically, the OAuth 2.0 authorization framework enables a third-party application to obtain limited access to an HTTP service.
 
-### OAuth 2.0, 2 Legged
+There are multiple variants of this flow, and depending on certain conditions you need to select one of them. But in general all these variants can be identified as being one of 2 groups, the 3-legged variants and the 2-legged variants.
 
-Authentication and authorization for MessageHandler happens using the OAuth 2.0 flow, more specifically the 2-legged variant. This is a variant of the traditional OAuth 2.0 flow where the user of the application is not involved.
+* The 3-legged variants are used to authenticate application access on behalf of people, by using an external provider and with the user's consent. After consent has been given, the application can access the user's information. This flow is being used by our web application, to allow you to log in using an external account (like github, bitbucket, google, facebook, etc...)
 
-This flow consists of 2 steps
+* The 2-legged variants are used to authenticate applications, without user consent. That means that the app typically can only access it's own information and not the user's. 
 
-- First you go to the serviceprovider to obtain a request token, typically by providing some kind of secret data in exchange of a token
-- Secondly you to to the serviceprovider using a request token to obtain an access token. This access token can than be used to access resources on the service provider until the access token expires
+If you want to learn more about these different variants, IBM has done a great job documenting all these [OAuth 2.0 variants](http://publib.boulder.ibm.com/infocenter/tivihelp/v2r1/index.jsp?topic=%2Fcom.ibm.tivoli.fim.doc_6226%2Fconfig%2Fconcept%2FOAuth20Workflow.html). 
+ 
+We believe that for the majority of applications, MessageHandler will be used as back-end service for the application itself, so without the user knowing about it. Therefore our api defaults to the 2 legged variant with client credentials flow.
 
-![Oauth2](http://www.websequencediagrams.com/cgi-bin/cdraw?lz=cGFydGljaXBhbnQgVXNlcgoABQxDb25zdW0ABg8iU2VydmljZSBQcm92aWRlciIKCm5vdGUgb3ZlcgApCiAgNi4xIE9idGFpbmluZyBhbiBVbmF1dGhvcml6ZWQgUmVxdWVzdCBUb2tlbgplbmQgbm90ZQoKAGwILT4AVxI6ICI2LjEuMS4AgREJAFoHcyBhAEMOIgphY3RpdmF0ZQCBHBQAgTESLT4AgWQIAF0HMi4gAIFYECBJc3N1ZXMgYSBwcmUtAIEzGCIKZGUAYBwAgQ8KAIJVCQCCJxgzAIIxDkFjY2VzcwCBfzIzAIIkDQCCcQdzAEIQIgoAgS0MAIESCgCBLx0AgighMwCCNBVHcmFuAGIgAIRUEw&s=vs2010)
+## Obtaining an access token
 
-This flow differs from the traditional username/password flow, by only passing your secret info across the wire once, and afterwards you only exchange tokens.
+To obtain an access token from our api, you need to issue an http request to the `authorize` endpoint and pass in your client_id and client_secret information  (Ps: You can find these values on the connection details page in your account). It will return you an access_token and a refresh_token (which you will need later).
 
-### Windows Azure Active Directory Access Control Service
+Here is a code sample using RestSharp and JSon.Net
 
-As doing security right is tough, we have taken the design decision, to offload step 1 in the flow to an external service, the Windows Azure Active Directory Access Control Service.
-
-Once you have obtained a request code from the ACS, you can use this code to request and access token from the `/Authorize` endpoint on the gateway Uri.
-
-### Windows Azure Acs Oauth2 Client
-
-To consume this flow in an easy way, you can make use of the excellent [Windows Azure Acs Oauth2 Client library](http://www.nuget.org/packages/WindowsAzure.Acs.Oauth2.client) which is an open source library written by one of our founders (before we decided to start this venture).
-
-All you need to do is fill in the secret values and the library will do the authentication and authorization dance for you. (Ps: You can find these values on the connection details page in your account)
-
-	private void Authorize()
+	private string GetAuthorizationHeader()
     {
 		const string ClientId = "XXXXXXXXXXXX"; 
         const string ClientSecret = "XXXXXXXXXXXX"; 
-        const string RedirectUri = "http://" + ClientId;
         const string Scope = "http://api.messagehandler.net/";
-        const string AuthenticationServer = "https://messagehandler-acs-eu-west-prod.accesscontrol.windows.net/v2/OAuth2-13/";
-        const string AuthorizationServer = "http://uritomessagehandlergateway:8080/authorize";
+        const string BaseUri = "http://secretapi.messagehandler.net/";
 
-        _client = new SimpleOAuth2Client(new Uri(AuthorizationServer), 
-    							        new Uri(AuthenticationServer), 
-                						ClientId, 
-               							ClientSecret, 
-                						Scope, 
-                						new Uri(RedirectUri), 
-                						ClientMode.TwoLegged);
+         var client = new RestClient(BaseUri);
 
-       _client.Authorize();
+        var request = new RestRequest("authorize", Method.POST);
+        request.AddParameter("client_id", ClientId);
+        request.AddParameter("client_secret", ClientSecret);
+        request.AddParameter("scope", Scope);
+        request.AddParameter("grant_type", "client_credentials");
+
+        var response = client.Execute(request);
+
+		var info = JsonConvert.DeserializeObject<dynamic>(response.Content);
+        string token = info.access_token;
+		string refresh_token = info.refresh_token;
+
+        return "Bearer " + Convert.ToBase64String(Encoding.UTF8.GetBytes(token));
 	   
     }
 
-Every time you need to access a resource on the gateway, you need to pass it an accesstoken, these accesstokens will not remain valid over time and you need to request a new one, but the oauth client will take care of the details.
+You will have to convert the token value into an authorization header that can be passed along subsequent web requests, by base 64 encoding the token and append it as a `Bearer ` token.
 
-	var accesstoken = _client.GetAccessToken()
+### Passing the header to the api
+
+Every time you request information from or perform an operation on our API you need to pass in the token as an authorization header and bearer token as an Http header.
+
+	private string RequestEndpoint()
+    {
+		var header = GetAuthorizationHeader();
+		
+		var client = new RestClient(BaseUri);
+
+        var request = new RestRequest("endpoints", Method.POST);
+        request.AddHeader(HttpRequestHeader.Authorization.ToString(), header);
+
+        request.AddParameter("protocol", "http");
+        request.AddParameter("channel", Channel);
+        request.AddParameter("environment", Environment);
+
+        var response = client.Execute(request);
+
+		var endpoint = JsonConvert.DeserializeObject<dynamic>(response.Content);
+        return endpoint.address;
+	}
+
+### Refreshing the access token
+
+Access tokens only have a limited lifetime, when the token expires, you will need to obtain a new one. This is done by authorizing again, this time using the refresh token that you got originally.
+
+	private string GetAuthorizationHeader()
+    {
+        var refreshRequest = new RestRequest("authorize", Method.POST);
+        refreshRequest.AddParameter("client_id", Settings.ClientId);
+        refreshRequest.AddParameter("client_secret", Settings.ClientSecret);
+        refreshRequest.AddParameter("scope", Scope);
+        refreshRequest.AddParameter("grant_type", "refresh_token");
+        refreshRequest.AddParameter("refresh_token", refresh_token);
+
+        response = client.Execute(refreshRequest);
+
+        string access_token = JsonConvert.DeserializeObject<dynamic>(response.Content).access_token;
+        return "Bearer " + Convert.ToBase64String(Encoding.UTF8.GetBytes(access_token));
+    }
+
