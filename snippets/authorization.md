@@ -3,17 +3,12 @@ To obtain an access token from our api, you need to issue an http request to the
 
 	private string GetAuthorizationHeader()
     {
-		const string ClientId = "XXXXXXXXXXXX"; 
-        const string ClientSecret = "XXXXXXXXXXXX"; 
-        const string Scope = "http://api.messagehandler.net/";
-        const string BaseUri = "http://secretapi.messagehandler.net/";
-
-         var client = new RestClient(BaseUri);
+        var client = new RestClient("http://api.messagehandler.net/");
 
         var request = new RestRequest("authorize", Method.POST);
-        request.AddParameter("client_id", ClientId);
-        request.AddParameter("client_secret", ClientSecret);
-        request.AddParameter("scope", Scope);
+        request.AddParameter("client_id", "XXXXXXXXXXXX");
+        request.AddParameter("client_secret", "XXXXXXXXXXXX");
+        request.AddParameter("scope", "http://api.messagehandler.net/");
         request.AddParameter("grant_type", "client_credentials");
 
         var response = client.Execute(request);
