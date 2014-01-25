@@ -1,9 +1,3 @@
-## SignalR
-
-Before you connect, make sure you are authorized using the OAuth 2.0, 2 legged authorization flow and that you have obtained an endpoint for the signalr protocol.
-
-### Sending messages
-
 To send a message to your channel using the signalr protocol, you invoke the provided method on the signalr hub at the given address, and pass in the `Channel`, the `Environment` and the message you want to send. 
 
 	private void Send()

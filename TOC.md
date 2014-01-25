@@ -5,8 +5,10 @@
 ### General
 
 *  [Authorization](/documentation/gateway/authorization)
+*  [Endpoints](/documentation/gateway/endpoints)
 *  [Signalr](/documentation/gateway/signalr)
-*  [HTTP API](/documentation/gateway/httpapi)
+*  [HTTP](/documentation/gateway/http)
+*  [AMQP](/documentation/gateway/amqp)
 
 ### Handlers
 
