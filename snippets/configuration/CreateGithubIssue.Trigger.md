@@ -1,0 +1,1 @@
+A condition, written in javascript, that identifies messages for which a github issue should be created.
