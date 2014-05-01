@@ -1,0 +1,1 @@
+Looks like there is no content for documentation snippet with key {0}, feel free to open an issue on [github](https://github.com/MessageHandler/MessageHandler.Documentation/issues) or even [contribute yourself]({1}) if you're up for it. 
