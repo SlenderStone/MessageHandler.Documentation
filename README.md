@@ -11,8 +11,7 @@ For simple changes the GitHub web UI should suffice.
 
  * Find the page you want to edit.
  * Click the `Improve this` button, this will take you to the GitHub copy of the markdown for this page.
- * Click `Edit`. This will automatically fork the project so you can edit the file.
- * Make the changes you require. Ensure you verify your changes in the `Preview` tab
+  * Make the changes you require. Ensure you verify your changes in the `Preview` tab
  * Add a description of your changes
  * Click `Propose File Changes`
  
@@ -22,7 +21,7 @@ For more complex changes you should fork and then submit a pull request. This is
 
  * [Fork](http://help.github.com/forking/) on GitHub
  * Clone your fork locally
- * Work on your feature
+ * Work on your changes
  * Push the commits to GitHub
  * Send a Pull Request on GitHub
 
