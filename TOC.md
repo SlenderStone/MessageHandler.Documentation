@@ -1,6 +1,6 @@
 ### General
 
-*  [How to contribute](/documentation/readme)
+*  [How to contribute](/documentation/README)
 
 ### General
 
