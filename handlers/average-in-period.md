@@ -1,6 +1,6 @@
 ## Average in period
 
-Computes an average value for measumrents in a defined time period
+Computes an average value for measurements in a defined time period
 
 ### Handler properties
 
