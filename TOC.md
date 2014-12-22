@@ -2,7 +2,7 @@
 
 *  [How to contribute](/documentation/README)
 
-### General
+### Connecting
 
 *  [Authorization](/documentation/gateway/authorization)
 *  [Endpoints](/documentation/gateway/endpoints)
