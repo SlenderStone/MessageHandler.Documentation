@@ -1,58 +1,36 @@
-## How to contribute
+## Getting started
 
-Before you start ensure you have
+Welcome to [MessageHandler](http://www.messagehandler.net), the one and only message processing platform on the internet. Our platform allows you to collect data in real time and respond to this information in any way you like (without having to do all the hard work yourself). This page provides links to all the resources that you need to start learning about our platform. Use the flow suggested in this document for the most effective learning path.
 
- *  Created a [GitHub account](https://github.com/signup/free)
- *	Understand the basics of [collaborating on GitHub](https://help.github.com/categories/63/articles)
+### Tell me more about messaging
 
-### The GitHub web UI 
+To fully understand what our platform does and how to use it, you should understand the basics of messaging first.
 
-For simple changes the GitHub web UI should suffice.
-
- * Find the page you want to edit.
- * Click the `Improve this` button, this will take you to the GitHub copy of the markdown for this page.
-  * Make the changes you require. Ensure you verify your changes in the `Preview` tab
- * Add a description of your changes
- * Click `Propose File Changes`
+ * What is messaging?
+ * What is messaging used for?
+ * What are common message exchange patterns?
+ * What is message processing?
+ * What are common message processing patterns?
  
-### By forking and submitting a pull request
+### Tell me more about how MessageHandler is structured
 
-For more complex changes you should fork and then submit a pull request. This is useful if you are proposing multiple file changes
-
- * [Fork](http://help.github.com/forking/) on GitHub
- * Clone your fork locally
- * Work on your changes
- * Push the commits to GitHub
- * Send a Pull Request on GitHub
-
-For more information see [Collaborating on GitHub](https://help.github.com/categories/63/articles) especially [using GitHub pull requests](https://help.github.com/articles/using-pull-requests) 
+ * What is a handler?
+ * What is a channel?
+ * What is an environment?
+ * What is an endpoint?
  
-## Markdown
+### Get started with your first channel
 
-The pages are currently rendered using [MarkdownDeep](http://www.toptensoftware.com/markdowndeep/) with *Markdown Extra Enhancements* enabled. 
-
-As we apply a custom stylesheet in the documentation pages, there may be a significant difference between the GitHub flavoured Markdown and our visualisation. So when changes are accepted you should double check how the rendered version looks.
-
-For editing markdown on your desktop using MarkdownDeep try the following
-
-### [MarkdownPad](http://markdownpad.com/)
-
-Ensure you enable *MarkdownDeep Extras* by going to 
-
-    Tools > Options > Markdown > Markdown Processor > Markdown (Extra)  
-	
-### [MarkPad](http://code52.org/DownmarkerWPF/) 
-
-Ensure you enable *MarkdownDeep Extras* by going to 
-
-    Settings > markdown extra > toggle the switch to red
-	
-# More info on Markdown see
+ * Install a channel from the gallery
+ * Customize existing channels
  
- * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
- * [Github Flavored Markdown](https://help.github.com/articles/github-flavored-markdown)
+### Teach me how to send data into my channels
 
-# Additional Resources
+ * How to send data using HTTP
+ * How to send data using AMQP
+ * How to send data using SignalR
 
- * [General GitHub documentation](http://help.github.com/)
- * [GitHub pull request documentation](http://help.github.com/send-pull-requests/)
+### Advanced topics
+ 
+ * Channel design
+ * Building handlers
