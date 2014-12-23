@@ -25,13 +25,13 @@ To fully understand what our platform does and how to use it, you should underst
  * Install a channel from the gallery
  * Customize existing channels
  
-### Learn how to send data into your channels
+### Learn how to send data into your channel
 
  * How to send data using HTTP
  * How to send data using AMQP
  * How to send data using SignalR
  
- ### Learn how to receive messages from your channels
+ ### Learn how to receive messages from your channel
 
  * How to receive messages using HTTP
  * How to receive messages using AMQP
