@@ -12,7 +12,7 @@ This is the first article in a series in which we will dive deeper into custom h
 
 It is advised to set up a source repository per handler using a source control system of your choice. If you want this source control to integrate with our build services, then it has to support either Git, Mercurial, Subversion or TeamFoundationServer and be publicly addressable. 
 
-In this article series, we'll use a public repository on github: https://github.com/MessageHandler/MessageHandler.Handlers.AverageInPeriod. This repository will contain a handler that computes an average value over a given period in time.
+In this article series, we'll use a public repository on github: [https://github.com/MessageHandler/MessageHandler.Handlers.AverageInPeriod](https://github.com/MessageHandler/MessageHandler.Handlers.AverageInPeriod). This repository will contain a handler that computes an average value over a given period in time.
 
 Using a repository per handler has the following benefits
 
@@ -38,12 +38,12 @@ Now that your local repository is all set up, it is time to create the visual st
 
  * Open Visual Studio 2013
  * Navigate to File > New Project > Visual C# > Class Library
- * Make sure *'.Net Framework 4.5.1'* or newer is selected
- * Name: *AverageInPeriod*
- * Location: *C:\github.org\mh\handlers\averageinperiod\*
+ * Make sure **'.Net Framework 4.5.1'** or newer is selected
+ * Name: **AverageInPeriod**
+ * Location: **'C:\github.org\mh\handlers\averageinperiod\'**
  * Unmark 'Create directory for solution'
 
-After creating the class library project, I prefer to rename the root folder from `AverageInPeriod` to `src`.
+After creating the class library project, I prefer to rename the root folder from **AverageInPeriod** to **src**.
  
 ### Add nuget dependencies
 
@@ -53,21 +53,21 @@ If you haven't done so already, you should add our MyGet feed to your list of pa
 
  * Navigate to Tools > Options > NuGet Package Manager > Package Sources
  * Add
-	- Name: MessageHandler Myget
-	- Source: https://www.myget.org/F/messagehandler/
+	- Name: **'MessageHandler Myget'**
+	- Source: **'https://www.myget.org/F/messagehandler/'**
  * Click OK
  
 Then open the NuGet package manager:
 
  * Right click Project > References
  * Click Manage NuGet Packages
- * Open Online > MessageHandler Myget
- * Make sure 'Include Prerelease' is selected instead of 'Stable only'
+ * Open Online > **'MessageHandler Myget'**
+ * Make sure **'Include Prerelease'** is selected instead of 'Stable only'
  
 Now you should see 2 packages
 
- * MessageHandler: This is the SDK you need in order to develop handlers
- * MessageHandler.Emulator: Optional, this package allows you to emulate a handler runtime locally and can be useful in order to test the behavior of your handler.
+ * **MessageHandler**: This is the SDK you need in order to develop handlers
+ * **MessageHandler.Emulator**: Optional, this package allows you to emulate a handler runtime locally and can be useful in order to test the behavior of your handler.
  
 Make sure you install at least the SDK and it's dependency.
 
