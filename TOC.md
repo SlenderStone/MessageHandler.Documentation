@@ -1,6 +1,7 @@
 ### General
 
-*  [How to contribute](/documentation/README)
+*  [Getting started](/documentation/README)
+*  [How to contribute](/documentation/CONTRIBUTING)
 
 ### Connecting
 
