@@ -8,6 +8,7 @@ To fully understand what our platform does and how to use it, you should underst
 
  * What is messaging?
  * What is messaging used for?
+ * What are common message types?
  * What are common message exchange patterns?
  * What is message processing?
  * What are common message processing patterns?
@@ -24,11 +25,17 @@ To fully understand what our platform does and how to use it, you should underst
  * Install a channel from the gallery
  * Customize existing channels
  
-### Teach me how to send data into my channels
+### Learn how to send data into your channels
 
  * How to send data using HTTP
  * How to send data using AMQP
  * How to send data using SignalR
+ 
+ ### Learn how to receive messages from your channels
+
+ * How to receive messages using HTTP
+ * How to receive messages using AMQP
+ * How to receive messages using SignalR
 
 ### Advanced topics
  
