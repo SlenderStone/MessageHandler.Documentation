@@ -31,7 +31,7 @@ To fully understand what our platform does and how to use it, you should underst
  * How to send data using AMQP
  * How to send data using SignalR
  
- ### Learn how to receive messages from your channel
+### Learn how to receive messages from your channel
 
  * How to receive messages using HTTP
  * How to receive messages using AMQP
