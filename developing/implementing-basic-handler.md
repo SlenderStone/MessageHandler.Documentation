@@ -5,7 +5,7 @@ In this document we'll look at the basics of handler development, explain the in
  * First the handler needs to look at every message and determine whether it is interesting or not
  * Then it has to act on those messages that have been deemed interesting
  
- ### What we will do in this tutorial
+### What we will do in this tutorial
  
  In this document you will learn how to implement both of these requirements as well as make some of the aspects of a handler configurable by other users.
 
