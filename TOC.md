@@ -43,8 +43,8 @@
 ### Developing Handlers
 
 *  [Setting up your solution](/documentation/developing/setting-up-solution)
-<!-- *  [Implementing a basic handler](/documentation/developing/implementing-basic-handler)
-*  [Testing your handler locally](/documentation/developing/local-testing)
+*  [Implementing a basic handler](/documentation/developing/implementing-basic-handler)
+<!-- *  [Testing your handler locally](/documentation/developing/local-testing)
 *  [Setting up an automated build](/documentation/developing/setting-up-automated-build)
 *  [Adding dynamic filtering](/documentation/developing/adding-dynamic-filtering)
 *  [Adding variables and templates](/documentation/developing/adding-variables-and-templates)
