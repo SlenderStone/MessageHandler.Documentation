@@ -25,8 +25,6 @@
 	-  [Route to Servicebus queue](/documentation/handlers/route-to-servicebus-queue)  
 	-  [Subscribe To Mailchimp](/documentation/handlers/subscribe-to-mailchimp)
 -->
-<!-- -  [Setting up your solution](/documentation/developing/setting-up-solution)
-	-  [Implementing a basic handler](/documentation/developing/implementing-basic-handler) -->
 <!-- ### Basics
 *  [Messaging basics](/documentation/messaging/basics)
 *  [Processing basics](/documentation/messaging/basics)
