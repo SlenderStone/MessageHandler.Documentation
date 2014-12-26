@@ -1,11 +1,11 @@
-* General
+* [Getting started](/documentation/README)
 	-  [Getting started](/documentation/README)
 	-  [How to contribute](/documentation/CONTRIBUTING)
-* Connectivity
+* [Connectivity](/documentation/gateway)
 	-  [Signalr](/documentation/gateway/signalr)
 	-  [HTTP](/documentation/gateway/http)
 	-  [AMQP](/documentation/gateway/amqp)
-* Handlers
+* [Handlers](/documentation/handlers)
 	-  [Average in period](/documentation/handlers/average-in-period)
 	-  [Create Service Identity](/documentation/handlers/create-service-identity)
 	-  [Forward To Signalr](/documentation/handlers/forward-to-signalr)
@@ -18,7 +18,7 @@
 	-  [Perist Entity To Table Storage](/documentation/handlers/persist-entity-to-table-storage)
 	-  [Route to Servicebus queue](/documentation/handlers/route-to-servicebus-queue)  
 	-  [Subscribe To Mailchimp](/documentation/handlers/subscribe-to-mailchimp)
-* Developing Handlers
+* [Developing](/documentation/developing)
 	-  [Setting up your solution](/documentation/developing/setting-up-solution)
 	-  [Implementing a basic handler](/documentation/developing/implementing-basic-handler)
 
