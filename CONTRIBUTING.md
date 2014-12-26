@@ -1,11 +1,11 @@
-## How to contribute
+# How to contribute
 
 Before you start ensure you have
 
  *  Created a [GitHub account](https://github.com/signup/free)
  *	Understand the basics of [collaborating on GitHub](https://help.github.com/categories/63/articles)
 
-### The GitHub web UI 
+## The GitHub web UI 
 
 For simple changes the GitHub web UI should suffice.
 
@@ -15,7 +15,7 @@ For simple changes the GitHub web UI should suffice.
  * Add a description of your changes
  * Click `Propose File Changes`
  
-### By forking and submitting a pull request
+## By forking and submitting a pull request
 
 For more complex changes you should fork and then submit a pull request. This is useful if you are proposing multiple file changes
 
@@ -47,12 +47,12 @@ Ensure you enable *MarkdownDeep Extras* by going to
 
     Settings > markdown extra > toggle the switch to red
 	
-# More info on Markdown see
+### More info on Markdown see
  
  * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
  * [Github Flavored Markdown](https://help.github.com/articles/github-flavored-markdown)
 
-# Additional Resources
+### Additional Resources
 
  * [General GitHub documentation](http://help.github.com/)
  * [GitHub pull request documentation](http://help.github.com/send-pull-requests/)
