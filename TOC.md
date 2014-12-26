@@ -1,4 +1,4 @@
-* [Getting started](/documentation/README)
+* [[!](https://www.messagehandler.net/images/left/dashboard.png?v=1.0.0.0) <span>Getting started</span>](/documentation/README)
 * [How to contribute](/documentation/CONTRIBUTING)
 * [Channels](/documentation/channels)
 * [Designing Channels](/documentation/designing-channels)
