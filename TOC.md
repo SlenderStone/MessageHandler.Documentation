@@ -1,18 +1,6 @@
 * General
 	-  [Getting started](/documentation/README)
 	-  [How to contribute](/documentation/CONTRIBUTING)
-<!-- ### Basics
-*  [Messaging basics](/documentation/messaging/basics)
-*  [Processing basics](/documentation/messaging/basics)
-*  [Use cases](/documentation/messaging/usecases)
-*  [Message types](/documentation/messaging/types)
-*  [Exchange patterns](/documentation/messaging/exchangepatterns)
-*  [Processing patterns](/documentation/messaging/processingpatterns) -->
-<!-- ### Concepts
-*  [Handlers](/documentation/basics/handlers)
-*  [Channels](/documentation/basics/channels)
-*  [environments](/documentation/basics/handlers)
-*  [endpoints](/documentation/basics/handlers) -->
 * Connectivity
 	-  [Signalr](/documentation/gateway/signalr)
 	-  [HTTP](/documentation/gateway/http)
@@ -33,6 +21,19 @@
 * Developing Handlers
 	-  [Setting up your solution](/documentation/developing/setting-up-solution)
 	-  [Implementing a basic handler](/documentation/developing/implementing-basic-handler)
+
+<!-- ### Basics
+*  [Messaging basics](/documentation/messaging/basics)
+*  [Processing basics](/documentation/messaging/basics)
+*  [Use cases](/documentation/messaging/usecases)
+*  [Message types](/documentation/messaging/types)
+*  [Exchange patterns](/documentation/messaging/exchangepatterns)
+*  [Processing patterns](/documentation/messaging/processingpatterns) -->
+<!-- ### Concepts
+*  [Handlers](/documentation/basics/handlers)
+*  [Channels](/documentation/basics/channels)
+*  [environments](/documentation/basics/handlers)
+*  [endpoints](/documentation/basics/handlers) -->
 <!-- *  [Testing your handler locally](/documentation/developing/local-testing)
 *  [Setting up an automated build](/documentation/developing/setting-up-automated-build)
 *  [Adding dynamic filtering](/documentation/developing/adding-dynamic-filtering)
