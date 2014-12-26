@@ -1,14 +1,14 @@
-## Average in period
+# Average in period
 
 Computes an average value for measurements in a defined time period
 
-### Handler properties
+## Handler properties
 
 **MeasurementType:** A string representing the measurement type.
 
 **DurationInSeconds:** A window of time in which to compute the mathematical average.
 
-### Message requirements
+## Message requirements
 
 **Serializer:** JSON
 
@@ -21,11 +21,11 @@ Computes an average value for measurements in a defined time period
         AggregationMode: string
 	}
 
-###Notes
+##Notes
 
 **AggregationMode:** Must be empty or have value "None" 
 
-### Outgoing message
+## Outgoing message
 
 **Serializer:** JSON
 
@@ -38,7 +38,7 @@ Computes an average value for measurements in a defined time period
         AggregationMode: string
 	}
 
-###Notes
+##Notes
 
 **AggregationMode:** Will have the value "Average"
 
