@@ -1,8 +1,8 @@
-## Index entity in table storage
+# Index entity in table storage
 
 Persists an entity root / aggregate to table storage, where a lookup key is used as partitionkey. The intention is to have 1 partition for every query you want to execute, consider these tables as secondary indexes with values copied over.
 
-### Handler properties
+## Handler properties
 
 **ConnectionString:** The connections string to the storage account where you want to persist the entities.
 
@@ -12,7 +12,7 @@ Persists an entity root / aggregate to table storage, where a lookup key is used
 
 **OrderByProperty:** The property name for which the value will be used as rowkey, in this case to be used for determining order in the partition
 
-### Message requirements
+## Message requirements
 
 **Serializer:** JSON
 
@@ -26,7 +26,7 @@ Persists an entity root / aggregate to table storage, where a lookup key is used
 		Where: { Lat: double, Lon: double }
 	}
 
-### Outgoing message format
+## Outgoing message format
 
 **Serializer:** JSON
 
@@ -40,7 +40,7 @@ Persists an entity root / aggregate to table storage, where a lookup key is used
 		Where: { Lat: double, Lon: double }
 	}
 
-### Notes
+## Notes
 
 **$type:** Type requirements will be removed in the future
 

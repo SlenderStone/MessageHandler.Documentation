@@ -1,8 +1,8 @@
-## Forward to smtp
+# Forward to smtp
 
 Sends an email to an Smtp server in response to a message that satisfies a certain condition.
 
-### Handler properties
+## Handler properties
 
 **Trigger:** A condition that will trigger the handler to send an email via the smtp server, the trigger has to be created using Javascript syntax and must evaluate to a bool. You can access the message under consideration using the `msg` parameter. For example:
 
@@ -24,7 +24,7 @@ Sends an email to an Smtp server in response to a message that satisfies a certa
 
 **Body:** (Optional) The body to use in the email.
 
-### Message requirements
+## Message requirements
 
 **Serializer:** JSON
 

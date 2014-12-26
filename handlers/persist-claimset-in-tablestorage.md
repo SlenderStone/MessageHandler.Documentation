@@ -1,8 +1,8 @@
-## Persist claimset to table storage
+# Persist claimset to table storage
 
 Persists a claimset returned from Windows Azure Access Control Service to table storage.
 
-### Handler properties
+## Handler properties
 
 **ConnectionString:** The connections string to the storage account where you want to persist the claimsets.
 
@@ -13,7 +13,7 @@ Persists a claimset returned from Windows Azure Access Control Service to table 
 **RowKeyClaim:** The claim identifier for which the value will be used as rowkey
 
 
-### Message requirements
+## Message requirements
 
 **Serializer:** JSON
 
@@ -27,7 +27,7 @@ Persists a claimset returned from Windows Azure Access Control Service to table 
 		Where: { Lat: double, Lon: double }
 	}
 
-### Notes
+## Notes
 
 **$type:** Type requirements will be removed in the future
 

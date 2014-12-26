@@ -1,8 +1,8 @@
-## Persist entity to table storage
+# Persist entity to table storage
 
 Persists an entity root / aggregate to table storage, where the natural identity is used as partitionkey. The intention is to have 1 partition per entity/aggregate and using the rows for other parts of the aggregate.
 
-### Handler properties
+## Handler properties
 
 **ConnectionString:** The connections string to the storage account where you want to persist the entities.
 
@@ -12,7 +12,7 @@ Persists an entity root / aggregate to table storage, where the natural identity
 
 **RowKeyProperty:** (optional) The property name for which the value will be used as rowkey
 
-### Message requirements
+## Message requirements
 
 **Serializer:** JSON
 
@@ -26,7 +26,7 @@ Persists an entity root / aggregate to table storage, where the natural identity
 		Where: { Lat: double, Lon: double }
 	}
 
-### Outgoing message format
+## Outgoing message format
 
 **Serializer:** JSON
 
@@ -40,7 +40,7 @@ Persists an entity root / aggregate to table storage, where the natural identity
 		Where: { Lat: double, Lon: double }
 	}
 
-### Notes
+## Notes
 
 **$type:** Type requirements will be removed in the future
 

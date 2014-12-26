@@ -1,14 +1,14 @@
-## Subscribe to mailchimp
+# Subscribe to mailchimp
 
 Subscribes an email address to a mailchimp distribution list.
 
-### Handler properties
+## Handler properties
 
 **ApiKey:** Your mailchimp API key
 
 **ListId:** The listId of the list where the email address should be added to
 
-### Message requirements
+## Message requirements
 
 **Serializer:** JSON
 

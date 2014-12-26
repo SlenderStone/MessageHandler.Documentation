@@ -1,8 +1,8 @@
-## Persist Entity To Sql
+# Persist Entity To Sql
 
 Persists an entity to sql server or sql azure.
 
-### Handler properties
+## Handler properties
 
 **ConnectionString:** The connectionstring to your sql server or sql azure instance.
 
@@ -14,7 +14,7 @@ Persists an entity to sql server or sql azure.
 
 	{'property1':'Column1', 'property2':'Column2'}
 
-### Message requirements
+## Message requirements
 
 **Serializer:** JSON
 

@@ -1,8 +1,8 @@
-## Create service identity
+# Create service identity
 
 Creates a service identity in Windows Azure Access Control service, based on an input name.
 
-### Handler properties
+## Handler properties
 
 **ServiceNamespace:** your ACS service namespace.
 
@@ -16,7 +16,7 @@ Creates a service identity in Windows Azure Access Control service, based on an 
 
 **ValidityPeriod:** Number of days the generated key will be valid for the identity to create
 
-### Message requirements
+## Message requirements
 
 **Serializer:** JSON
 
@@ -30,7 +30,7 @@ Creates a service identity in Windows Azure Access Control service, based on an 
 		Where: { Lat: double, Lon: double }
 	}
 
-### Notes
+## Notes
 
 **$type:** Type requirements will be removed in the future
 
