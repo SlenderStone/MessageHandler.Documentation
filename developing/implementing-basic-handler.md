@@ -1,11 +1,11 @@
-## Implementing a basic handler
+# Implementing a basic handler
 
 In this document we'll look at the basics of handler development, explain the interfaces available in our SDK and show you how to use them to implement message processing logic. In essence a handler does only one thing: respond to interesting information that is flying by. But if you look at this more carefully, you'll see that this single thing actually implies doing 2 things.
 
  * First the handler needs to look at every message and determine whether it is interesting or not
  * Then it has to act on those messages that have been deemed interesting
  
-### What we will do in this tutorial
+## What we will do in this tutorial
  
  In this document you will learn how to implement both of these requirements as well as make some of the aspects of a handler configurable by other users.
 
@@ -13,7 +13,7 @@ In this document we'll look at the basics of handler development, explain the in
  * Taking action
  * Define configuration settings
  
-### Detecting interesting messages
+## Detecting interesting messages
 
 In order, for a handler, to determine whether certain data is worth acting upon, it needs to inspect this data first. 
 
@@ -104,7 +104,7 @@ After we've filtered out all the definitely uninteresting messages, it's time to
     	Unit = v.First().Unit
     };
 	
-### Taking action
+## Taking action
 
 Once you have determined which messages are deemed interesting, you should also do something with those messages. This step is called the action, represented by `IAction<T>` in our SDK. An action could be anything, send the message to some external service, a datastore, a line of business system, or just push it back into the channel for further processing. In our example we're just going to do that, push it back into the channel.
 
@@ -143,7 +143,7 @@ Once you have determined which messages are deemed interesting, you should also 
 
 Note that our SDK also supports .Net Diagnostics Trace logging, anything you write to the Trace infrastructure will be automatically sent to our logging channel, processed for interesting events and stored for you in a convenient way and made accessible in our administrative UI.
 
-### Define configuration settings
+## Define configuration settings
 
 Once you have finished your query and action, you probably want to allow some of the parameters to be configurable by the end user of your handler. We support this by leveraging the default .net configuration system. Simply define a configuration section with configuration properties and it's meta data and use the configuration section in your code as you typically would.
 

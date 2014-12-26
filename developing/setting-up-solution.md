@@ -1,14 +1,14 @@
-## Setting up a solution
+# Setting up a solution
 
 This is the first article in a series in which we will dive deeper into custom handler development. In this first instalment we'll look only at setting up the solution structure, including source control repository and nuget dependencies.
 
-### What will we do in this tutorial
+## What will we do in this tutorial
 
  * Set up a source repository for our handler
  * Create a visual studio solution
  * Add the necessary nuget dependencies
  
-### Setting up a source repository
+## Setting up a source repository
 
 It is advised to set up a source repository per handler using a source control system of your choice. If you want this source control to integrate with our build services, then it has to support either Git, Mercurial, Subversion or TeamFoundationServer and be publicly addressable. 
 
@@ -32,7 +32,7 @@ Once you have setup your repository, clone the repository locally
  
 If github didn't do it for you, make sure to add the correct .gitattributes and .gitignore files for c# projects to your repository
 
-### Create a visual studio solution
+## Create a visual studio solution
 
 Now that your local repository is all set up, it is time to create the visual studio solution. Handlers are supposed to be very simple and understandable, so the less structure your solution has the better.
 
@@ -45,7 +45,7 @@ Now that your local repository is all set up, it is time to create the visual st
 
 After creating the class library project, I prefer to rename the root folder from **AverageInPeriod** to **src**.
  
-### Add nuget dependencies
+## Add nuget dependencies
 
 The final step before we can start development of our handler is to include the necessary nuget packages. For now these packages can only be found on our public MyGet feed (once all the dust has settled the stable versions will become available on nuget as well)
 
