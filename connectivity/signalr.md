@@ -13,8 +13,8 @@ Before you try send messages using SignalR, make sure you have created endpoint 
 To send a message to your channels using the signalr protocol, all you need to do is establish a hub connection with the correctly specified endpoint values. Then use the `push` method on the server side hub object (which is a part of our gateway).
 
 	$(function () {    
-		$.connection.hub.url = 'paste your **inbound** signalr uri here';
-		var sas = 'paste your **inbound** shared access signature here';
+		$.connection.hub.url = 'paste your inbound signalr uri here';
+		var sas = 'paste your inbound shared access signature here';
 		
 		var hub = $.connection.messages;
 
@@ -45,8 +45,8 @@ Before you try receiving messages using SignalR, make sure you have created endp
 To receive messages from your channels using the signalr protocol, all you need to do is specify a `receive` callback on the client side hub object, then establish a hub connection with the correctly specified endpoint values and finally invoke the `subscribe` method on the server side hub object to signal that you're ready to receive messages.
 
 	$(function () {    
-		$.connection.hub.url = 'paste your **outbound** signalr uri here';
-		var sas = 'paste your **outbound** shared access signature here';
+		$.connection.hub.url = 'paste your outbound signalr uri here';
+		var sas = 'paste your outbound shared access signature here';
 		
 		var hub = $.connection.messages;
 		
@@ -68,5 +68,6 @@ To receive messages from your channels using the signalr protocol, all you need 
 Web applications are often multi-tenant, multi-user or at least multi-task environments. Depending on who is logged in, or where they are inside the application, you'll want to show users only a subset of all messages that are directed towards your application as a whole. To support this, you can call `subscribeconditional` and specify a message property name and value. This will instruct the server to only invoke your receive method when the property name on the received messages exists and contains the specified value.
 
 	$.connection.hub.start().done(function () {
-		hub.server.subscribeconditional("UserId", "myuserid"); // tells the server that you're ready to receive messages filtered by UserId with value myuserid
+		// tells the server that you're ready to receive messages where the UserId has value myuserid
+		hub.server.subscribeconditional("UserId", "myuserid"); 
 	});	
