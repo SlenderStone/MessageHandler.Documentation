@@ -71,3 +71,5 @@ Web applications are often multi-tenant, multi-user or at least multi-task envir
 		// tells the server that you're ready to receive messages where the UserId has value myuserid
 		hub.server.subscribeconditional("UserId", "myuserid"); 
 	});	
+
+Note that SignalR, by nature, has no guaranteed message delivery! So it is always possible that messages sent from the server never arrive at the web application, make sure your application is prepared for that.
