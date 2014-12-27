@@ -1,8 +1,8 @@
 # Setting up a solution
 
-This is the first article in a series in which we will dive deeper into custom handler development. In this first instalment we'll look only at setting up the solution structure, including source control repository and nuget dependencies.
+In this article we will dive deeper into a proposed solution structure for custom handler development. More specifically we'll look only at setting up the solution structure, including source control repository and nuget dependencies. The goal of this document to gather all practices that the majority of handler developers accept as their standard, so that any new developer can get up to speed quickly. Don't feel required to follow any of it though (or better share your thoughts with us if you have better practices.)
 
-## What will we do in this tutorial
+## What will we do in this article
 
  * Set up a source repository for our handler
  * Create a visual studio solution
@@ -10,9 +10,9 @@ This is the first article in a series in which we will dive deeper into custom h
  
 ## Setting up a source repository
 
-It is advised to set up a source repository per handler using a source control system of your choice. If you want this source control to integrate with our build services, then it has to support either Git, Mercurial, Subversion or TeamFoundationServer and be publicly addressable. 
+It is advised to set up a source repository per handler using a source control system of your choice. If you want this source control system to integrate with our build services, then it has to support either Git, Mercurial, Subversion or TeamFoundationServer and be publicly addressable. Note: If your source control system is behind the corporate firewall, there are other ways to push your handler packages as well.
 
-In this article series, we'll use a public repository on github: [https://github.com/MessageHandler/MessageHandler.Handlers.AverageInPeriod](https://github.com/MessageHandler/MessageHandler.Handlers.AverageInPeriod). This repository will contain a handler that computes an average value over a given period in time.
+In this article, we'll use a public repository on github: [https://github.com/MessageHandler/MessageHandler.Handlers.AverageInPeriod](https://github.com/MessageHandler/MessageHandler.Handlers.AverageInPeriod). This repository will contain a handler that computes an average value over a given period in time.
 
 Using a repository per handler has the following benefits
 
@@ -30,7 +30,7 @@ Once you have setup your repository, clone the repository locally
  
  `C:\github.org\mh\handlers> git clone https://github.com/MessageHandler/MessageHandler.Handlers.AverageInPeriod.git averageinperiod`
  
-If github didn't do it for you, make sure to add the correct .gitattributes and .gitignore files for c# projects to your repository
+If github didn't do it for you automatically, make sure to add the correct .gitattributes and .gitignore files for c# projects to your repository
 
 ## Create a visual studio solution
 

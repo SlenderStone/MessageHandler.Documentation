@@ -1,11 +1,13 @@
 # Implementing a basic handler
 
-In this document we'll look at the basics of handler development, explain the interfaces available in our SDK and show you how to use them to implement message processing logic. In essence a handler does only one thing: respond to interesting information that is flying by. But if you look at this more carefully, you'll see that this single thing actually implies doing 2 things.
+In this document we'll look at the basics of handler development, explain the interfaces available in our SDK and show you how to use them to implement message processing logic. 
+
+In essence a handler does only one thing: respond to interesting information that is flying by. But if you look at this more carefully, you'll see that this single thing actually implies doing 2 things.
 
  * First the handler needs to look at every message and determine whether it is interesting or not
  * Then it has to act on those messages that have been deemed interesting
  
-## What we will do in this tutorial
+## What we will do in this document
  
  In this document you will learn how to implement both of these requirements as well as make some of the aspects of a handler configurable by other users.
 
