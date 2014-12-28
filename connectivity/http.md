@@ -8,7 +8,7 @@ Basically it's the messaging protocol that the internet has been built on. Suppo
 
 Before you try send messages using Http, make sure you have created an endpoint that has the appropriate authorizations! See [Endpoints](/documentation/connectivity/endpoints) for more details.
 
-To send messages to your channels using the http protocol, all you need to do is to perform a POST request on the uri provided by the endpoint, while including the correct Shared Access Signature in the authorization header
+To send messages to your channels using the http protocol, all you need to do is to perform a POST request on the uri provided by the endpoint, while including the correct Shared Access Signature in the authorization header and the message content in the body.
 
 	private async Task Send()
     {
@@ -38,7 +38,7 @@ By default our gateway routes your messages to all channels and environments tha
 
 Before you try receiving messages using Http, make sure you have created an endpoint that has the appropriate authorizations! See [Endpoints](/documentation/connectivity/endpoints) for more details.
 
-To receive messages from your channels using the http protocol, all you need to do is to perform a GET request on the uri provided by the endpoint, while including the correct Shared Access Signature in the authorization header.
+To receive messages from your channels using the http protocol, all you need to do is to perform a GET request on the uri provided by the endpoint, while including the correct Shared Access Signature in the authorization header. The response will contain zero or more messages.
 
 	private async Task Receive()
     {
