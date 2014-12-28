@@ -2,7 +2,7 @@
 
 According to wikipedia: *"The Hypertext Transfer Protocol (HTTP) is an application protocol for distributed, collaborative, hypermedia information systems. HTTP is the foundation of data communication for the World Wide Web. HTTP functions as a request-response protocol in the client-server computing model. The client submits an HTTP request message to the server. The server, which provides resources such as HTML files and other content, or performs other functions on behalf of the client, returns a response message to the client. The response contains completion status information about the request and may also contain requested content in its message body."*
 
-Basically it's the messaging protocol that the internet has been built on. Support for this protocol is so ubiquitous, that almost any system can use it.
+Basically it's the messaging protocol that the internet has been built on. Support for this protocol is so ubiquitous, that almost any system can use it. If you want to learn more about Http itself, please refer to [the wiikipedia document on Http](en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
 
 ## Sending messages
 
