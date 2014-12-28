@@ -10,7 +10,9 @@ Endpoints can be the virtual representation of just about anything, a mobile app
  * Enabled standard protocols on our gateway. These protocols allow you to send and receive messages in a way that your IT systems can understand and reduce the need to change existing systems with protocols that you haven't used before.
  * Routing rules, which our gateway will use to decide to which channel an endpoint is allowed to send, or receive from.
  
-If you want to learn more about defining endpoints, check out our [Endpoints](/documentation/connectivity/endpoints) documentation
+If you want to learn more about defining endpoints, check out our documentation on the topic: 
+
+ * [Endpoints](/documentation/connectivity/endpoints)
 
 ## Using the protocols
 
