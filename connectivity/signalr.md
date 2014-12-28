@@ -8,7 +8,7 @@ If you want to learn more about SignalR itself, please refer to the [Introductio
 
 ## Sending messages
 
-Before you try send messages using SignalR, make sure you have created endpoint that has the appropriate authorizations! 
+Before you try send messages using SignalR, make sure you have created an endpoint that has the appropriate authorizations! See [Endpoints](/documentation/connectivity/endpoints) for more details.
 
 To send a message to your channels using the signalr protocol, all you need to do is establish a hub connection with the correctly specified endpoint values. Then use the `push` method on the server side hub object (which is a part of our gateway).
 
@@ -40,7 +40,7 @@ By default our gateway routes your messages to all channels and environments tha
 	
 ## Receiving messages
 
-Before you try receiving messages using SignalR, make sure you have created endpoint that has the appropriate authorizations!
+Before you try receiving messages using SignalR, make sure you have created an endpoint that has the appropriate authorizations! See [Endpoints](/documentation/connectivity/endpoints) for more details.
 
 To receive messages from your channels using the signalr protocol, all you need to do is specify a `receive` callback on the client side hub object, then establish a hub connection with the correctly specified endpoint values and finally invoke the `subscribe` method on the server side hub object to signal that you're ready to receive messages.
 
@@ -72,6 +72,12 @@ Web applications are often multi-tenant, multi-user or at least multi-task envir
 		hub.server.subscribeconditional("UserId", "myuserid"); 
 	});	
 
-## On guaranteed delivery	
+## Remarks
+
+### On guaranteed delivery	
 	
 Note that SignalR, by nature, has no guaranteed message delivery! So it is always possible that messages sent from the server never arrive at the web application, make sure your application is prepared for that.
+
+### On Shared Access Signatures
+
+As your customers are downloading the Javascript files that contain your Shared Access Signature, you are basically sharing the signature with them. To prevent them from using this signature from outside your we, be sure to set the correct cross domain origin policy on your endpoint definition.
