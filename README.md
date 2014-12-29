@@ -7,7 +7,7 @@ Welcome to [MessageHandler](http://www.messagehandler.net), the one and only mes
 To fully understand what our platform does and how to use it, you should understand the basics of messaging first.
 
  * [What is messaging?](/documentation/basics/what-is-messaging)
- * What is messaging used for?
+ * [What is messaging used for?](/documentation/basics/use-cases)
  * What are common message types?
  * What are common message exchange patterns?
  * What is message processing?
