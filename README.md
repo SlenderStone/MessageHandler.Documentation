@@ -28,16 +28,16 @@ To fully understand what our platform does and how to use it, you should underst
 ## Learn how to send data into your channel
 
  * [How to send data using HTTP](/documentation/connectivity/http#sending)
- * [How to send data using AMQP] (/documentation/connectivity/amqp#sending)
- * [How to send data using SignalR] (/documentation/connectivity/signalr#sending)
+ * [How to send data using AMQP](/documentation/connectivity/amqp#sending)
+ * [How to send data using SignalR](/documentation/connectivity/signalr#sending)
  
 ## Learn how to receive messages from your channel
 
- * [How to receive messages using HTTP] (/documentation/connectivity/http#receiving)
- * [How to receive messages using AMQP] (/documentation/connectivity/amqp#receiving)
- * [How to receive messages using SignalR] (/documentation/connectivity/signalr#receiving)
+ * [How to receive messages using HTTP](/documentation/connectivity/http#receiving)
+ * [How to receive messages using AMQP](/documentation/connectivity/amqp#receiving)
+ * [How to receive messages using SignalR](/documentation/connectivity/signalr#receiving)
 
 ## Advanced topics
  
- * [Channel design] (/documentation/designing-channels)
- * [Building handlers] (/documentation/developing-handlers)
+ * [Channel design](/documentation/designing-channels)
+ * [Building handlers](/documentation/developing-handlers)

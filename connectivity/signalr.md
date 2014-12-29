@@ -6,7 +6,7 @@ In other words SignalR is a messaging protocol/framework specifically created fo
 
 If you want to learn more about SignalR itself, please refer to the [Introduction to SignalR on the ASP.NET website](http://www.asp.net/signalr/overview/getting-started/introduction-to-signalr)
 
-## Sending messages
+## <a name="sending"></a>Sending messages
 
 Before you try send messages using SignalR, make sure you have created an endpoint that has the appropriate authorizations! See [Endpoints](/documentation/connectivity/endpoints) for more details.
 
@@ -38,7 +38,7 @@ By default our gateway routes your messages to all channels and environments tha
 
 	$.connection.hub.qs = { "Authorization": sas, "x-mh-channel": 'paste channel id here' , "x-mh-environment": 'paste environment id here'   };
 	
-## Receiving messages
+## <a name="receiving"></a>Receiving messages
 
 Before you try receiving messages using SignalR, make sure you have created an endpoint that has the appropriate authorizations! See [Endpoints](/documentation/connectivity/endpoints) for more details.
 

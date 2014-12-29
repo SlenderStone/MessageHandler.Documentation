@@ -4,7 +4,7 @@ According to wikipedia: *"The Advanced Message Queuing Protocol (AMQP) is an ope
 
 AMQP is our internal protocol of choice as it is extremely suitable for server to server messaging and has high reliability and security requirements. To learn more about AMQP itself, please refer to [the wikipedia document on Amqp](http://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol)
 
-### Sending messages
+### <a name="sending"></a>Sending messages
 
 Before you try send messages using Amqp, make sure you have created an endpoint that has the appropriate authorizations! See [Endpoints](/documentation/connectivity/endpoints) for more details.
 
@@ -46,7 +46,7 @@ By default our gateway routes your messages to all channels and environments tha
 	data.Properties["x-mh-channel"] = "paste channel id here";
 	data.Properties["x-mh-environment"] = "paste environment id here";
 	
-## Receiving messages
+## <a name="receiving"></a>Receiving messages
 
 Before you try receiving messages using Amqp, make sure you have created an endpoint that has the appropriate authorizations! See [Endpoints](/documentation/connectivity/endpoints) for more details.
 

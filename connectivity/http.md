@@ -4,7 +4,7 @@ According to wikipedia: *"The Hypertext Transfer Protocol (HTTP) is an applicati
 
 Basically it's the messaging protocol that the internet has been built on. Support for this protocol is so ubiquitous, that almost any system can use it. If you want to learn more about Http itself, please refer to [the wiikipedia document on Http](en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
 
-## Sending messages
+## <a name="sending"></a>Sending messages
 
 Before you try send messages using Http, make sure you have created an endpoint that has the appropriate authorizations! See [Endpoints](/documentation/connectivity/endpoints) for more details.
 
@@ -34,7 +34,7 @@ By default our gateway routes your messages to all channels and environments tha
 	client.DefaultRequestHeaders.Add("x-mh-channel", "paste channel id here");
 	client.DefaultRequestHeaders.Add("x-mh-environment", "paste environment id here");
 	
-## Receiving messages
+## <a name="receiving"></a>Receiving messages
 
 Before you try receiving messages using Http, make sure you have created an endpoint that has the appropriate authorizations! See [Endpoints](/documentation/connectivity/endpoints) for more details.
 
