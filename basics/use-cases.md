@@ -1,10 +1,10 @@
 # Use cases
 
-At it's core, messaging is a very simple concept, pieces of digital information that are travelling from one point to another. And because it's such a basic concept, it can be applied in many different ways. This document tries to list some of the use cases where messaging is often applied and shows you how to put it all together.
+At it's core, messaging is a very simple concept, pieces of digital information that are traveling from one point to another. And because it's such a basic concept, it can be applied in many different ways. This document tries to list some of the use cases where messaging is often applied and shows you how to put it all together.
 
 ## Remote Control
 
-The first use case, in which messaging plays a key role are Remote Control systems. Typically these systems consist of a central control application (ranging in size of smartphone app to a full blown control room) which sends commands to one or more devices out there.
+The first use case, in which messaging plays a key role are Remote Control systems. Typically these systems consist of a central control application (ranging in size of smart phone app to a full blown control room) which sends commands to one or more devices out there.
 
 ## Monitoring & alerting
 
@@ -24,11 +24,11 @@ And finally, messaging is also used to integrate different technical systems wit
 
 ## Auditing and compliance management
 
-When all systems and people in an organisation, or ecosystem, are communicating with each other using messaging, then auditing and compliance management, which are often a serious organizational challenge, can also be fully automated. Just keep a copy of all messages being passed around and you will get a complete audit of what is going on inside your organisation. Ideal for auditing and compliance management.
+When all systems and people in an organization, or ecosystem, are communicating with each other using messaging, then auditing and compliance management, which are often a serious organizational challenge, can also be fully automated. Just keep a copy of all messages being passed around and you will get a complete audit of what is going on inside your organization. Ideal for auditing and compliance management.
 
 ## Event Sourcing
 
-If your audit log is complete, which should be the case for compliance reasons anyway, it even becomes possible to restore the state of your organisation as it was at any point in time in the past, by simply replaying all the messages in the audit log up until the point of interest. This is the main idea behind the concept of Event Sourcing, which uses the audit log to rebuild the state of a technical entity, such as application state or the database state. In fact a database is in these types of solutions only viewed as a view on the audit log, and not as the single point of truth... allowing more efficient use of multiple types of data stores in the same application, where each data store is used for a specific aspect of the application.
+If your audit log is complete, which should be the case for compliance reasons anyway, it even becomes possible to restore the state of your organization as it was at any point in time in the past, by simply replaying all the messages in the audit log up until the point of interest. This is the main idea behind the concept of Event Sourcing, which uses the audit log to rebuild the state of a technical entity, such as application state or the database state. In fact a database is in these types of solutions only viewed as a view on the audit log, and not as the single point of truth... allowing more efficient use of multiple types of data stores in the same application, where each data store is used for a specific aspect of the application.
 
 ##  Building systems
 
