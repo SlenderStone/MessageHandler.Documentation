@@ -1,5 +1,9 @@
 # Handlers
 
+Handlers are the core processing unit in our system. Handlers look at each message that flows through a channel, determines whether it is interesting and then responds to it in any way it sees fit. Each message, means each message, including the ones it emits itself!
+
+## Handlers in our gallery
+
  * [Average in period](/documentation/handlers/average-in-period)
  * [Create Service Identity](/documentation/handlers/create-service-identity)
  * [Forward To Signalr](/documentation/handlers/forward-to-signalr)

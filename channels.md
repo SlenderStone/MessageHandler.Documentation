@@ -9,7 +9,7 @@ Almost every administrative action taken inside MessageHandler is performed at t
  
 But of course you can also get started more quickly than designing one yourself, our gallery already has a few recipes for channels ready for you.
 
-# Existing channels in our gallery
+# Channels in our gallery
 
  * [Temperature Monitor](/documentation/channels/temperature-monitor)
  * [Twitter Engagement Analysis](/documentation/channels/twitter-engagement-analysis)
