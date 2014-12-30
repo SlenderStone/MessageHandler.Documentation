@@ -4,5 +4,18 @@ In this series of articles we'll dive into the ins and outs of developing custom
 
 ## Learn the basics of handler development
 
- *  [Setting up your solution](/documentation/developing-handlers/setting-up-solution)
- *  [Implementing a basic handler](/documentation/developing-handlers/implementing-basic-handler)
+ * [Setting up your solution](/documentation/developing-handlers/setting-up-solution)
+ * [Implementing a basic handler](/documentation/developing-handlers/implementing-basic-handler)
+ * Unit testing handlers
+ * Perform local integration tests
+ * Create an automated build
+ * Perform integration tests in the cloud
+ * Diagnosing potential issues with your handler
+ 
+## More advanced topics
+
+ * Using the variable engine
+ * Using the template engine
+ * Implementing dynamic filters
+ * Batching and other performance improvements
+ * Building streams
