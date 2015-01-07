@@ -147,12 +147,13 @@ Note that our SDK also supports .Net Diagnostics Trace logging, anything you wri
 
 ## Define configuration settings
 
-Once you have finished your query and action, you probably want to allow some of the parameters to be configurable by the end user of your handler. We support this by leveraging the default .net configuration system. Simply define a configuration section with configuration properties and it's meta data and use the configuration section in your code as you typically would.
+Once you have finished your query and action, you probably want to allow some of the parameters to be configurable by the end user of your handler. We support this by leveraging the default .net configuration system. Simply define a configuration section with configuration properties and it's meta data and use the configuration section in your code as you typically would. In order to differentiate your handler's configuration, from any other configuration section that may reside in a referenced assembly, you have to decorated the configuration section with the `HandlerConfigurationAttribute`.
 
 Whenever you upload your handler into our system, or as part of our continuous integration system, we will extract the metadata from your this configuration section and set up our internal structures in such a way that end users can manage the values that will eventually show up in your configuration section at runtime.
 
 <!-- code block -->
 
+	[HandlerConfiguration]
 	public class AverageInPeriodHandlerConfig : ConfigurationSection
     {
         [ConfigurationProperty("DurationInSeconds", IsRequired = true, DefaultValue = 30)]
