@@ -1,7 +1,13 @@
 # Messaging
 
-According to wikipedia: *"A message is a discrete unit of communication intended by the source for consumption by some recipient or group of recipients. A message may be delivered by various means, including courier, telegraphy, and electronic bus. There are two main senses of the word "message" in computing: messages between the human users of computer systems that are delivered by those computer systems, and messages passed between programs or between components of a single program, for their own purposes."*
+Messaging is a very simple concept, which has been around since the dawn of life. Simply put, a message is a piece of information that is being exchanged by two parties. Throughout history, these two parties were almost always people, and the message could be conveyed in different forms: from sounds to smoke signals to pigeons carrying a piece of paper.
 
-Simply put, a message is a piece of information that is travelling from one point to another. That point, which we call an endpoint, is typically a machine. Sometimes that machine is acting as a human interface (like a smartphone), sometimes it's just another machine responding automatically to the content of the message.
+Today, more and more information exchange is involving machines instead of being limited to just people. In this case, the messages are conveyed in various digital forms: from unstructured textual information, to structured message formats, or even seemingly raw bytes that conceal encrypted information.
 
-While a message travels from it's source to a destination, it can pass through other machines in between. These intermediaries come in many forms and sizes, some are small and have relatively low processing capabilities, others are huge server farms and can be pretty smart. But all of these can process, or handle, the messages while they see them flying by. As it's name implies, MessageHandler is one of these (huge & smart) intermediaries.
+No matter the form of the information, a message is a piece of information that is travelling from one point to another. These points, which we call an endpoint, are as far as our service is concerned, always a machine and the message stream is always digital. But very often those machines represent a human being (like a smart phone) or even a physical object (like an embedded micro controller).
+
+While a message travels from it's source to a destination, it can pass through other machines in between. These intermediaries come in many forms and sizes, some are small and have relatively low processing capabilities, others are huge server farms and can be extremely smart. But all of these intermediaries can in some way process, or handle, the messages while they see them flying by. 
+
+Handling messages can imply many things, from simple format translations, to aggregation logic, over complex pattern detection and even fully automated reactions performed by smart software components, which we call handlers, that are combined into complete solutions (which we call channels).
+
+As it's name implies, MessageHandler is such a (huge & smart) intermediary. It allows you to easily build, run, manage, share and even sell your message processing logic.

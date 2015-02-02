@@ -1,6 +1,8 @@
 # Getting started
 
-Welcome to [MessageHandler](http://www.messagehandler.net), the one and only message processing platform on the internet. Our platform allows you to collect data in real time and respond to this information in any way you like (without having to do all the hard work yourself). This page provides links to all the resources that you need to start learning about our platform. Use the flow suggested in this document for the most effective learning path.
+Welcome to [MessageHandler](http://www.messagehandler.net), the one and only message processing platform on the internet. Basically, our platform allows you to collect data in real time (aka messages) and respond to this information in any way you like (aka handle it). 
+
+This page provides links to all the resources that you need to start learning about our platform. Use the flow suggested in this document for the most effective learning path.
 
 ## Tell me more about messaging
 
