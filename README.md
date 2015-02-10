@@ -1,6 +1,6 @@
 # Getting started
 
-Welcome to [MessageHandler](http://www.messagehandler.net), the online message processing platform. This platform allows you to collect data transmitted in real time (messages), process this data into more valuable information, and respond to the resulting information in any way you like (handle it). 
+Welcome to [MessageHandler](http://www.messagehandler.net), the online message processing platform. This platform allows you to collect transmitted data in real time (messages), process this data into more valuable information, and respond to the resulting information in any way you like (handle it). 
 
 You can rent existing processing logic created by experts in the field, or, you can design your own in an easy way.
 
