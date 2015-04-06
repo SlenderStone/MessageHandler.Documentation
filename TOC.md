@@ -1,10 +1,11 @@
 * [![Getting started](https://www.messagehandler.net/images/left/start.png?v=1.0.0.0)<span>Getting started</span>](/documentation/README)
-* [![How to contribute](https://www.messagehandler.net/images/left/contribute.png?v=1.0.0.0)<span>How to contribute</span>](/documentation/CONTRIBUTING)
+* [![Architecture](https://www.messagehandler.net/images/left/architecture.png?v=1.0.0.0)<span>Architecture</span>](/documentation/architecture)
 * [![Channels](https://www.messagehandler.net/images/left/channels.png?v=1.0.0.0)<span>Channels</span>](/documentation/channels)
 * [![Designing channels](https://www.messagehandler.net/images/left/design.png?v=1.0.0.0)<span>Designing channels</span>](/documentation/designing-channels)
 * [![Connectivity](https://www.messagehandler.net/images/left/connect.png?v=1.0.0.0)<span>Connectivity</span>](/documentation/connectivity)
 * [![Handlers](https://www.messagehandler.net/images/left/handlers.png?v=1.0.0.0)<span>Handlers</span>](/documentation/handlers)	
 * [![Developing handlers](https://www.messagehandler.net/images/left/develop.png?v=1.0.0.0)<span>Developing handlers</span>](/documentation/developing-handlers)
+* [![How to contribute](https://www.messagehandler.net/images/left/contribute.png?v=1.0.0.0)<span>How to contribute</span>](/documentation/CONTRIBUTING)
 
 <!-- ### Basics
 *  [Messaging basics](/documentation/messaging/basics)
