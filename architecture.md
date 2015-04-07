@@ -26,7 +26,9 @@ MessageHandler has been specifically designed to bridge the technical gap betwee
 
 ## Internet of things
 
-Typical corporate internet of things scenario's involve hundreds, thousands or even more sensors and actuators deployed across geographically dispersed areas. These sensors collect a lot of information about their environment. This information is extremely valuable for both the owning organization as it's partner ecosystem. 
+Typical corporate internet of things scenarios involve hundreds, thousands or even more sensors and actuators deployed across geographically dispersed areas. These sensors collect a lot of information about their environment. This information is extremely valuable for both the owning organization as it's partner ecosystem. 
+
+![MesssageHandler](/documentation/images/architecture-iot.png)
 
 For security reasons these devices are often not directly attached to the rest of the world, but make use of local field gateways to aggregate and secure the information stream before sending it over to the cloud for further processing. So on our end, we typically provision an endpoint per local field gateway instance. 
 
@@ -39,8 +41,6 @@ The endpoint directs the stream of messages to one or more channels, potentially
 * Perform aggregations on the message stream as humans can't interpret millions of data points per second.
 * Detect anomalies and boundary checks at real time.
 * Notify the relevant people or partner organisations in case some of these boundaries are exceeded.
-
-![MesssageHandler](/documentation/images/architecture-iot.png)
 
 ## Business processes
 
