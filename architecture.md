@@ -9,6 +9,7 @@ From a very high level, one can look at distributed software architectures as 'd
 ## core concepts
 
 MessageHandler is not trying to be the one size fits all messaging solution, we are solely focussed on getting those dots right that logically belong in the cloud. Typically this involves 3 kinds of dots:
+
 * Handlers: Perform processing logic on messages
 * Endpoints: Secured gates to which external dots can push messages
 * Stream: Pulls messages from endpoints of other systems, and pushes them into our system
@@ -16,6 +17,7 @@ MessageHandler is not trying to be the one size fits all messaging solution, we 
 ![MesssageHandler](/documentation/images/architecture-concepts.png)
 
 Next to 3 different types of dots, we also have a few grouping mechanisms
+
 * Channels: Groups handlers and streams, that collectively solve a specific issue, as a unit, at design time.
 * Environments: Groups handlers and streams by the location they are hosted in, at runtime.
 * Account: Groups everything that you and your team owns.
