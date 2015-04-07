@@ -44,4 +44,10 @@ The endpoint directs the stream of messages to one or more channels, potentially
 
 ## Business processes
 
+Most organizations have well established, and automated, internal business processes. But in today's global economy, most business processes do not end at the organizational boundary any more, they extend into the business ecosystem and are often co-owned by multiple parties. MessageHandler is perfectly positioned for this type of use case, as it is neutral ground for all parties involved and messaging concepts overcomes many of the challenges posed by integrating different parties.
+
+Let's have a look at a simple example that shows a B2B e-commerce scenario, where you want the system to validate the order in various ways, maybe leverage an external SAAS system to perform fraud detection, before you accept the order. Once the order has been validated and accepted, you ship the product, send an installation work order to your preferred installation partner and schedule a follow-up contact moment at an outsourced call center. 
+
 ![MesssageHandler](/documentation/images/architecture-business.png)
+
+What is extremely important in this scenario is guaranteed delivery. Our infrastructure guarantees at least-once-delivery semantics.
