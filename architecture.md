@@ -30,7 +30,7 @@ Typical corporate internet of things scenarios involve hundreds, thousands or ev
 
 ![MesssageHandler](/documentation/images/architecture-iot.png)
 
-For security reasons these devices are often not directly attached to the rest of the world, but make use of local field gateways to aggregate and secure the information stream before sending it over to the cloud for further processing. So on our end, we typically provision an endpoint per local field gateway instance. 
+For security reasons these devices are rarely directly attached to the rest of the world, but make use of local field gateways to aggregate and secure the information stream before sending it over to the cloud for further processing. So on our end, we typically provision an endpoint per local field gateway instance, not per sensor. 
 
 This approach however leads to data of many sensors, being concentrated on a relatively low amount of connections. But you don't have to worry about that, in contrast to many of our competitors we can easily handle very large volumes of messages per second. *(A little anecdote: even 'at rest' our system processes over 10.000 messages per second on a single node)*
 
