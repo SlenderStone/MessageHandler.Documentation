@@ -34,13 +34,33 @@ Now lets have a look at what such a scenario often translates into in terms of o
 
 ![MesssageHandler](/documentation/images/architecture-iot.png)
 
-For security reasons sensors are rarely directly attached to the internet, but make use of local field gateways to aggregate and secure the information stream before sending it over to the cloud for further processing. The reason for this is that most of those devices have very limited memory and cpu resources, as they want to run on batteries, and this prevents them from securing or encrypting their data. It is the role of the field gateway to make the local system secure. So on our end, we typically provision a secured endpoint per local field gateway instance, and not per sensor.
+For security reasons sensors are rarely directly attached to the internet, but make use of local field gateways to aggregate and secure the information stream before sending it over to the cloud for further processing. The reason for this is that most of those devices have very limited memory and cpu resources, as they want to run on batteries, and this prevents them from securing or encrypting their data. It is the role of the field gateway to make the local system secure. So on our end, we typically provision a secured **endpoint** per local field gateway instance, and not per sensor.
 
-The endpoint directs the stream of messages coming from the field gateway to one or more channels, potentially hosted in different environments, for processing. Processing is done by handlers that typically perform one of the following tasks
+The endpoint directs the stream of messages coming from the field gateway to one or more **channels**, potentially hosted in different **environments**, for processing. Processing is done by **handlers** that typically perform one of the following tasks:
 
 * Reduce the message stream so that only relevant information for the use case at hand needs to be taken into account.
 * Store the information in the message stream, for later historical analyses using big data technology.
 * Perform aggregations on the message stream as humans can't interpret millions of data points per second.
-* Detect anomalies and boundary checks at real time, as that is what humans really care about.
+* Boundary checks and anomaly detection in real time, as that is what we humans are most interested in.
 * Notify the relevant people or partner organisations in case some of these boundaries are exceeded.
+* And in some cases it is also desirable to automate the scenario completely, by sending commands back to the machine so that it can take preventive measures automatically.
 
+The general structure of this scenario is almost always the same, ingest as much information as possible, store it for later usage, but at the same time detect patterns and extract the interesting information & insights from it in real time, then forward those insights to people or machines that need to know about this information.
+
+## Under the hood
+
+Now that you have a solid understanding of the core functional concepts, lets take a look at how this translates into technical components under the hood.
+
+![MesssageHandler](/documentation/images/architecture-technical-overview.png)
+
+The core runtime, an environment, consists of 3 major subsystems:
+
+* **The fabric** is an azure cloudservice which is responsible for hosting, monitoring, managing, scaling and load balancing the handlers hosted on it.
+* **The gateway** is another azure cloudservice, plus a set of azure servicebus namespaces, which takes care of the endpoints assigned to it: among others it provisions protocol specific resources, it deals with authentication and authorization of devices, it takes care of routing of message streams towards the correct transport infrastructure and much more.
+* **The transport** wires everything together. It consists of a set of azure servicebus namespaces that have been configured based on your channel definitions.
+
+On top of the core runtime, you can find other subsystems that are all being operated by the core runtime
+
+![MesssageHandler](/documentation/images/architecture-dogfooding.png)
+
+Yes, you have read that right, we are dogfooding our own runtime to the extreme. Everything you can use inside our system has been built using our runtime. Every action you take will become a **message**, routed to a **channel** via an **endpoint** and then processed by a set of **handlers** to result into the desired action, everything in real time.
