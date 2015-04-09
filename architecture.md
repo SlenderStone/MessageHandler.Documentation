@@ -2,52 +2,45 @@
 
 The internet of things, business process automation, service orientation, microservices, mobile, cloud computing, and many other buzz words from both the past and present, are all variations on the same theme: Distributed software architectures.
 
-From a very high level, one can look at distributed software architectures as 'dots' of independent software components, that communicate with each other using various messaging patterns, very similar to the way humans communicate amongst themselves. This is obviously an extreme simplification, that hides all the complexity involved in distributed computing, but it's a great starting point nevertheless.
+From a very high level, one can look at distributed software architectures as 'dots' of independent software components, that communicate with each other using various messaging patterns, very similar to the way humans communicate amongst themselves. This is obviously an extreme simplification, that hides all the complexity involved in distributed computing, but it's a great starting point for this conversation nevertheless.
 
 ![MesssageHandler](/documentation/images/architecture.png)
 
 ## Core concepts
 
-MessageHandler is not trying to be the one size fits all messaging solution, we are solely focussed on getting those components right that logically belong in the cloud. Typically this involves 3 kinds of components:
+All of these software components perform a very specific role in the overall system, but because they are independent of each other the system can continue to operate even if some of the components are temporarily unavailable. Some typical component types that you will find in a distributed messaging system are:
 
-* **Handlers**: Perform processing logic on messages
-* **Endpoints**: Secured gates to which external dots can push messages
-* **Stream**: Pulls messages from endpoints of other systems, and pushes them into our system
+* Software that initiates a message exchange, like sensors, websites, or mobile interfaces. In our nomenclature we call these **origins**
+* Components that perform processing logic (think encryption, filtering, calculations etc...) on the data while it is passing by, we call these components **handlers**.
+* Secured gates to which external components can push their data, or receive information from in a secure way, over a distance, we call these **endpoints**.
+* Sometimes logic needs to pull information in from endpoints in other systems so that you can process it in your logic, we call these **streams**.
+* And ultimately the result of all this processing logic needs to end up somewhere, at a certain **destination**, this destination could be a database, an external system, a human or even a robot.
 
 ![MesssageHandler](/documentation/images/architecture-concepts.png)
 
-Next to 3 different types of hosted software components, we also have a few grouping mechanisms
+Even though the software components in such systems are typically independent of each other, in order to fulfill specific business use cases, they need to be tied together. You need to be able to control how the data flows, which component is interested in the output of which other component. You need to be able to apply configuration settings to everything so that components, and the whole, starts behaving in a well defined way. We call this collective a **channel**.
 
-* **Channels**: Groups handlers and streams, that collectively solve a specific issue, as a unit, at design time.
-* **Account**: Groups everything that you and your team owns, at design time.
-* **Environments**: Groups handlers and streams by the location they are hosted in, at runtime. Can be private, limited to an account.
+Once a channel has been composed, it needs to be put into operation. In order to do so, we deploy all of it's parts to a given **environment**. An environment is a bunch of machines hosted somewhere on the planet. All of our environments are powered by Windows Azure, which means you can put your logic on any continent, close to your customers. We will take care of managing those environments and keeping them up to date.
 
-MessageHandler has been specifically designed to bridge the technical gap between corporate internet of things implementations and the rest of the business ecosystem. So let's have a look at how our core concepts fit into these 2 scenarios.
+## On the internet of things
 
-## Internet of things
+MessageHandler provides you all the tools to build, sell, run and operate all kinds of message processing logic. But what makes it special is that it has been specifically designed for the 'internet of things' as well. It is in fact the ideal place to bridge the gap between corporate internet of things implementations and the rest of a business ecosystem. 
 
-Typical corporate internet of things scenarios involve hundreds, thousands or even more sensors and actuators deployed across geographically dispersed areas. These sensors collect a lot of information about their environment. This information is extremely valuable for both the owning organization as it's partner ecosystem. 
+What is so special about 'internet of things' scenarios, is the huge amount of information that is being generated. Typical corporate 'internet of things' scenarios involve thousands and more sensors and actuators deployed across geographically dispersed areas. Each sensor collects some information about it's environment and collectively this information is extremely valuable for both the owning organization as it's partner ecosystem. 
+
+And the more real time this information is the more valuable it becomes, often resulting in the desire to process millions of messages per second. But you don't have to worry about that, we can handle it. In contrast to many of our competitors (who are usually taking a pure request-reply based approach by stacking API calls) we can easily scale out to very large amounts of messages processed per second. *A little anecdote: even 'at rest' our system processes over 10.000 messages per second on a single machine, just because we can!*
+
+Now lets have a look at what such a scenario often translates into in terms of our concepts.
 
 ![MesssageHandler](/documentation/images/architecture-iot.png)
 
-For security reasons these devices are rarely directly attached to the rest of the world, but make use of local field gateways to aggregate and secure the information stream before sending it over to the cloud for further processing. So on our end, we typically provision an endpoint per local field gateway instance, not per sensor. 
+For security reasons sensors are rarely directly attached to the internet, but make use of local field gateways to aggregate and secure the information stream before sending it over to the cloud for further processing. The reason for this is that most of those devices have very limited memory and cpu resources, as they want to run on batteries, and this prevents them from securing or encrypting their data. It is the role of the field gateway to make the local system secure. So on our end, we typically provision a secured endpoint per local field gateway instance, and not per sensor.
 
-This approach however leads to data of many sensors, being concentrated on a relatively low amount of connections. But you don't have to worry about that, in contrast to many of our competitors we can easily handle very large volumes of messages per second. *(A little anecdote: even 'at rest' our system processes over 10.000 messages per second on a single node)*
-
-The endpoint directs the stream of messages to one or more channels, potentially hosted in different environments, for processing. Processing is done by handlers that typically perform one of the following tasks
+The endpoint directs the stream of messages coming from the field gateway to one or more channels, potentially hosted in different environments, for processing. Processing is done by handlers that typically perform one of the following tasks
 
 * Reduce the message stream so that only relevant information for the use case at hand needs to be taken into account.
 * Store the information in the message stream, for later historical analyses using big data technology.
 * Perform aggregations on the message stream as humans can't interpret millions of data points per second.
-* Detect anomalies and boundary checks at real time.
+* Detect anomalies and boundary checks at real time, as that is what humans really care about.
 * Notify the relevant people or partner organisations in case some of these boundaries are exceeded.
 
-## Business processes
-
-Most organizations have well established, and automated, internal business processes. But in today's global economy, most business processes do not end at the organizational boundary any more, they extend into the business ecosystem and are often co-owned by multiple parties. MessageHandler is perfectly positioned for this type of use case, as it is neutral ground for all parties involved and messaging concepts overcomes many of the challenges posed by integrating different parties.
-
-Let's have a look at a simple example that shows a B2B e-commerce scenario, where you want the system to validate the order in various ways, maybe leverage an external SAAS system to perform fraud detection, before you accept the order. Once the order has been validated and accepted, you ship the product, send an installation work order to your preferred installation partner and schedule a follow-up contact moment at an outsourced call center. 
-
-![MesssageHandler](/documentation/images/architecture-business.png)
-
-What is extremely important in this scenario is guaranteed delivery. Our infrastructure guarantees at least-once-delivery semantics.
