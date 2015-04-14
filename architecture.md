@@ -18,7 +18,9 @@ All of these software components perform a very specific role in the overall sys
 
 ![MesssageHandler](/documentation/images/architecture-concepts.png)
 
-Even though the software components in such systems are typically independent of each other, in order to fulfill specific business use cases, they need to be tied together. You need to be able to control how the data flows, which component is interested in the output of which other component. You need to be able to apply configuration settings to everything so that components, and the whole, starts behaving in a well defined way. We call this collective a **channel**.
+Even though the software components in such systems are typically independent of each other, in order to fulfill specific business use cases they need to be tied together. You need to be able to control how the data flows, which component is interested in the output of which other component, and you need to be able to apply configuration settings to everything so that the components, and the whole, start behaving in a well defined way. We call this collective a **channel**.
+
+![MesssageHandler](/documentation/images/architecture-channel.png)
 
 Once a channel has been composed, it needs to be put into operation. In order to do so, we deploy all of it's parts to a given **environment**. An environment is a bunch of machines hosted somewhere on the planet. All of our environments are powered by Windows Azure, which means you can put your logic on any continent, close to your customers. We will take care of managing those environments and keeping them up to date.
 
@@ -64,3 +66,7 @@ On top of the core runtime, you can find other subsystems that are all being ope
 ![MesssageHandler](/documentation/images/architecture-dogfooding.png)
 
 Yes, you have read that right, we are dogfooding our own runtime to the extreme. Everything you can use inside our system has been built using our runtime. Every action you take will become a **message**, routed to a **channel** via an **endpoint** and then processed by a set of **handlers** to result into the desired action, everything in real time.
+
+## Want to learn more?
+
+I hope I've been able to explain both our functional and technical architecture at a very high level. We are working hard to get more detailed information out about the individual aspects described in this article. In the mean time, if you want to learn more about certain aspects, do not hesitate to reach out to us through the discussion panel below. Or just stay in touch through twitter, our newsletter or other medium so that you can stay informed of updates.
