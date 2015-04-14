@@ -1,4 +1,4 @@
-# Connecting systems
+# Endpoints, Connecting systems
 
 ![MesssageHandler](/documentation/images/architecture-concepts.png)
 
