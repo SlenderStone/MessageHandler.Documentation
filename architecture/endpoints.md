@@ -2,6 +2,6 @@
 
 ![MesssageHandler](/documentation/images/architecture-concepts.png)
 
-## Technical design
+## Core resources
 
 ![MesssageHandler](/documentation/images/architecture-endpoint.png)
