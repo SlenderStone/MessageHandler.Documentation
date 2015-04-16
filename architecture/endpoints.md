@@ -52,7 +52,7 @@ For ingress, the adapters are stacked next to the amqp one (which is EventProces
 
 ![Endpoint Protocols Out](/documentation/images/architecture-endpoint-protocols-in.png)
 
-For egress the design is a bit different. In this case the adapters are layered on top of the queues as we need to store the messages temporarily until the endpoint can connect and come fetch them. Some protocols however have pub-sub semantics while maintaining an open connection, like Signalr does, for these protocols we maintain a server side queue processor that runs while a connection is open and continuously monitors the queue and forwards messages towards the connected client.
+For egress the design is a bit different. In this case the adapters are layered on top of the queues as we need to store the messages temporarily until the endpoint can connect, authenticate and come fetch them. Some protocols however have pub-sub semantics while maintaining an open connection, like Signalr does, for these protocols we maintain a server side queue processor that runs while a connection is open and continuously monitors the queue and forwards messages towards the connected client.
 
 ![Endpoint Protocols In](/documentation/images/architecture-endpoint-protocols-out.png)
 
