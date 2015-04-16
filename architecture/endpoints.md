@@ -56,7 +56,9 @@ For egress the design is a bit different. In this case the adapters are layered 
 
 ![Endpoint Protocols In](/documentation/images/architecture-endpoint-protocols-out.png)
 
-## Direct egress
+## Direct connectivity
 
-I hope this article gives you some more insight into how our endpoint infrastructure works under the hood. It is quite a convenient way to get messages flowing into and out of your channels in a structured way. But you have to remember that it is also possible, for egress, to send messages directly to other systems from within your handlers. Many of our existing handlers do this to f.e. send push notifications to mobile devices through azure notification hubs, or emails via an smtp server, etc.
+I hope this article gives you some more insight into how our endpoint infrastructure works under the hood. It is quite a convenient way to get messages flowing into and out of your channels in a structured way, but it isn't the only method. 
+
+It is also possible, for egress, to send messages directly to other systems from within your handlers. Many of our handlers do this to f.e. send push notifications to mobile devices through azure notification hubs, or emails via an smtp server, etc. For ingress you can also leverage our 'Streams' capability to pull messages from external systems, like an RSS feed or an HTTP API. But in those cases, all of the hard work for protocol support, authentication and routing needs to be embedded into the implementation of the respective handler.
 
