@@ -26,7 +26,7 @@ At the core of our gateway infrastructure you can find following components:
 
 For ingress:
 
-* Azure EventHubs for high scale ingress: These babies can handle up to a million messages per second, each. Needless to say that most use cases need less capacity per endpoint, so we do share these entities between multiple endpoints by default.
+* Azure EventHubs for high scale ingress: These entities can handle up to a million messages per second, each. Needless to say that most use cases need less capacity per endpoint, so we do share these entities between multiple endpoints by default.
 * As an authentication mechanism for ingress we leverage Shared Access Signatures on Publisher Policies, so that each endpoint is individually secured and revocable.
 * Our gateway software continuously processes these EventHubs and routes the messages towards the correct channels, based on 'route authorizations' and 'additional restrictions' that you can define in the administrative UI. Note: channel architecture is discussed in a separate article.
 
@@ -42,17 +42,17 @@ Note: We didn't use ServiceBus topics with subscription filters for egress purpo
 
 Out of the box, all Azure ServiceBus entities allow you communicate using the AMQPS 1.0 or HTTPS protocol. These are convenient, but in many scenario's other protocols are required. So we added a pluggable adapter layer to our gateway to accommodate for these, in addition to AMQP we also support the following protocols:
 
-* Signalr: Allows for real time communication with website frontends written in javascript.
-* Http: Many IoT devices do not have enough system resources to deal with SSL encryption. For production use, we suggest you leverage a local field gateway intermediary that has the capabilities to perform SSL encryption on behalf of these devices, but for development and prototyping this approach is way to complex. Hence we allow you to connect to our gateway in a non-encrypted way for these scenario's.
+* SignalR: Allows for real time communication with website frontends written in javascript.
+* HTTP: Many IoT devices do not have enough system resources to deal with SSL encryption. For production use, we suggest you leverage a local field gateway intermediary that has the capabilities to perform SSL encryption on behalf of these devices, but for development and prototyping this approach is way to complex. Hence we allow you to connect to our gateway in a non-encrypted way for these scenario's.
 * Other: Our gateway is pluggable, so we can add additional protocols to it if required. A common ask is MQTT for example, but almost anything is possible.
 
 The architecture of this pluggable layer looks like this.
 
-For ingress, the adapters are stacked next to the amqp one (which is EventProcessorHost based). All of them have dedicated addresses specific to the protocol, and are implemented using commonly available Microsoft frameworks. Each of these implementations uses a shared authentication layer to validate the ingress shared access signature and once validated, the messages are forwarded to a shared routing layer that routes the messages to your channels based on your authorization rules.
+For ingress, the adapters are stacked next to the AMQP one (which is EventProcessorHost based). All of them have dedicated addresses specific to the protocol, and are implemented using commonly available Microsoft frameworks. Each of these implementations uses a shared authentication layer to validate the ingress shared access signature and once validated, the messages are forwarded to a shared routing layer that routes the messages to your channels based on your authorization rules.
 
 ![Endpoint Protocols Out](/documentation/images/architecture-endpoint-protocols-in.png)
 
-For egress the design is a bit different. In this case the adapters are layered on top of the queues as we need to store the messages temporarily until the endpoint can connect, authenticate and come fetch them. Some protocols however have pub-sub semantics while maintaining an open connection, like Signalr does, for these protocols we maintain a server side queue processor that runs while a connection is open and continuously monitors the queue and forwards messages towards the connected client.
+For egress the design is a bit different. In this case the adapters are layered on top of the queues as we need to store the messages temporarily until the endpoint can connect, authenticate and come fetch them. Some protocols however have pub-sub semantics while maintaining an open connection, like SignalR does, for these protocols we maintain a server side queue processor that runs while a connection is open and continuously monitors the queue and forwards messages towards the connected client.
 
 ![Endpoint Protocols In](/documentation/images/architecture-endpoint-protocols-out.png)
 
