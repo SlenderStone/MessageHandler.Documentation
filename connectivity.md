@@ -12,12 +12,12 @@ Endpoints can be the virtual representation of just about anything, a mobile app
  
 If you want to learn more about defining endpoints, check out our documentation on the topic: 
 
- * [Endpoints](/documentation/connectivity/endpoints)
+ * [Managing Endpoints](/documentation/connectivity/endpoints)
 
 ## Using the protocols
 
 Once you have enabled a protocol, you probably need to write some code on your end in order to send messages to our gateway using said protocol. The following documents will show you all the details on how to do that:
 
- * [Signalr](/documentation/connectivity/signalr)
- * [HTTP](/documentation/connectivity/http)
- * [AMQP](/documentation/connectivity/amqp)
+ * [Connect with Signalr](/documentation/connectivity/signalr)
+ * [Connect with HTTP](/documentation/connectivity/http)
+ * [Connect with AMQP](/documentation/connectivity/amqp)

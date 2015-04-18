@@ -12,7 +12,7 @@ All of these software components perform a very specific role in the overall sys
 
 * Software that initiates a message exchange, like sensors, websites, or mobile interfaces. In our nomenclature we call these **origins**
 * Components that perform processing logic (think encryption, filtering, calculations etc...) on the data while it is passing by, we call these components **handlers**.
-* Secured gates to which external components can push their data, or receive information from in a secure way, over a distance, we call these **endpoints**.
+* Secured gates to which external components can push their data, or receive information from in a secure way, over a distance, we call these [**endpoints**](/documentation/architecture/endpoints).
 * Sometimes logic needs to pull information in from endpoints in other systems so that you can process it in your logic, we call these **streams**.
 * And ultimately the result of all this processing logic needs to end up somewhere, at a certain **destination**, this destination could be a database, an external system, a human or even a robot.
 
@@ -58,7 +58,7 @@ Now that you have a solid understanding of the core functional concepts, lets ta
 The core runtime, an environment, consists of 3 major subsystems:
 
 * **The fabric** is an azure cloudservice which is responsible for hosting, monitoring, managing, scaling and load balancing the handlers hosted on it.
-* **The gateway** is another azure cloudservice, plus a set of azure servicebus namespaces, which takes care of the endpoints assigned to it: among others it provisions protocol specific resources, it deals with authentication and authorization of devices, it takes care of routing of message streams towards the correct transport infrastructure and much more.
+* [**The gateway**](/documentation/architecture/endpoints) is another azure cloudservice, plus a set of azure servicebus namespaces, which takes care of the endpoints assigned to it: among others it provisions protocol specific resources, it deals with authentication and authorization of devices, it takes care of routing of message streams towards the correct transport infrastructure and much more.
 * **The transport** wires everything together. It consists of a set of azure servicebus namespaces that have been configured based on your channel definitions.
 
 On top of the core runtime, you can find other subsystems that are all being operated by the core runtime
