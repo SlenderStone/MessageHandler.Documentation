@@ -1,6 +1,6 @@
 # Endpoints, Connecting systems
 
-In this article, we'll discuss the internal architecture of endpoints. But before we do so, as a little reminder, we'll rephrase what the role of an endpoint is first.
+In this article, we'll discuss the internal architecture of endpoints. But before we do so, as a little reminder, we'll reiterate what the role of an endpoint is first.
 
 An endpoint is a specific type of node in a distributed software architecture, which has the purpose to provide secure connectivity between parts of the system (or several systems) that have different trust models. Think of this concept as the left part (the black dots) belonging to your datacenter, the blue dots are in the MessageHandler cloud and the black dots on the right belong to a business partner's datacenter. Inside of these 3 subsystems the components trust and know each other, every subsystem has its own security model. So an endpoint acts as a boundary, the end of a trusted subsystem, hence its name.
 
@@ -62,6 +62,6 @@ Endpoints are quite a convenient way to get messages flowing into and out of you
 
 It is also possible, for egress, to send messages directly to other systems from within your handlers. Many of our handlers do this to f.e. send push notifications to mobile devices through azure notification hubs, or emails via an smtp server, etc. For ingress you can also leverage our 'Streams' capability to pull messages from external systems, like an RSS feed or an HTTP API. But in those cases, all of the hard work for protocol support, authentication and routing needs to be embedded into the implementation of the respective handler.
 
-Want to learn more?
+## Learn how to use and connect to endpoints
 
 I hope this article gives you some more insight into how our endpoint infrastructure works under the hood. If you want to learn more practical details on how to define and manage endpoints, as well as how to connect your devices using one of the available protocols, check out our [connectivity section](http://www.messagehandler.net/documentation/connectivity).
