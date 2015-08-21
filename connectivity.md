@@ -1,14 +1,14 @@
 # Connectivity
 
-Messages are pieces of information flowing from one point to another. In many cases the source and destination of such a flow will be outside our system, in the physical world, somewhere online, or inside your business. We call these points endpoints and they are a crucial item of our connectivity features (called our gateway). 
+Messages are pieces of information flowing from an origin to a destination. In many cases the origin and destination are somewhere in the physical world, not in the cloud. And these points need to be connected securely to the cloud. We call these connection points endpoints and they are a crucial item of our connectivity features (called our gateway). 
 
 ## Endpoints
 
-Endpoints can be the virtual representation of just about anything, a mobile app, a sensor in a factory, a website, a line of business system, you name it. But in essence they are all composed of the following virtual components
+Endpoints are the virtual representation of just about anything in the real world, a mobile app, a sensor in a factory, a website, a line of business system, you name it. But in essence they are all composed of the following virtual components
 
- * Access Control Information, like Shared Access Signatures, for granting access to our gateway.
- * Enabled standard protocols on our gateway. These protocols allow you to send and receive messages in a way that your IT systems can understand and reduce the need to change existing systems with protocols that you haven't used before.
- * Routing rules, which our gateway will use to decide to which channel an endpoint is allowed to send, or receive from.
+ * **Access Control Information**, for granting access to our gateway.
+ * **Standard protocols** enabled on our gateway. These protocols allow you to send and receive messages in a way that your IT systems can understand and reduce the need to change existing systems with protocols that you haven't used before.
+ * **Routing rules**, which our gateway will use to decide to which channel an endpoint is allowed to send to, or receive from.
  
 If you want to learn more about defining endpoints, check out our documentation on the topic: 
 
