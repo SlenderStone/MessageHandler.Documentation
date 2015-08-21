@@ -1,6 +1,6 @@
 # Connectivity
 
-Messages are pieces of information flowing from an origin to a destination. In many cases the origin and destination are somewhere in the physical world, not in the cloud. And these points need to be connected securely to the cloud. We call these connection points endpoints and they are a crucial item of our connectivity features (called our gateway). 
+Messages are pieces of data that travel from an origin to a destination. In many cases the origin and destination are somewhere in the physical world, not in the cloud where our system is. So these points need to be connected securely to the cloud. We call these connection points endpoints and they are a crucial aspect of our connectivity and security system (called our gateway). 
 
 ## Endpoints
 
