@@ -11,8 +11,6 @@ In order to create handlers, you will need specific development skills.
 
 * [Learn how to develop handlers](/documentation/developing-handlers)
 
-If you're not into software development, check out the gallery for existing handlers.
-
-## Handlers in our gallery
+## If you're not into software development, check out the gallery for existing handlers
 
  * [Gallery](/handlers/gallery)
