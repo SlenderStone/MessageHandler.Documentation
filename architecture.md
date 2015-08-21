@@ -18,7 +18,7 @@ All of these software components perform a very specific role in the overall sys
 
 ![MesssageHandler](/documentation/images/architecture-concepts.png)
 
-Even though the software components in such systems are typically independent of each other, in order to fulfill specific business use cases they need to be tied together. You need to be able to control how the data flows, which component is interested in the output of which other component, and you need to be able to apply configuration settings to everything so that the components, and the whole, start behaving in a well defined way. We call this collective a **channel**.
+Even though the software components in such systems are typically independent of each other, in order to fulfill specific business use cases they need to be tied together. You need to be able to control how the data flows between them, which component is interested in the output of which other component, and you need to be able to apply configuration settings to everything so that the components, and the whole, start behaving in a well defined way. We call this collective a **channel**.
 
 ![MesssageHandler](/documentation/images/architecture-channel.png)
 
@@ -28,26 +28,28 @@ Once a channel has been composed, it needs to be put into operation. In order to
 
 MessageHandler provides you all the tools to build, sell, run and operate all kinds of message processing logic. But what makes it special is that it has been specifically designed for the 'internet of things' as well. It is in fact the ideal place to bridge the gap between corporate internet of things implementations and the rest of a business ecosystem. 
 
-What is so special about 'internet of things' scenarios, is the huge amount of information that is being generated. Typical corporate 'internet of things' scenarios involve thousands and more sensors and actuators deployed across geographically dispersed areas. Each sensor collects some information about it's environment and collectively this information is extremely valuable for both the owning organization as it's partner ecosystem. 
+What is so special about 'internet of things' scenarios, is the huge amount of information that is being generated. Typical corporate 'internet of things' scenarios involve thousands and more sensors and actuators deployed across geographically dispersed areas. Each sensor collects some data points about it's environment, individually these datapoints are of limited value, but collectively and when interpreted into information, this information is extremely valuable for both the owning organization as it's partner ecosystem. 
 
-And the more real time this information is the more valuable it becomes, often resulting in the desire to process millions of messages per second. But you don't have to worry about that, we can handle it. In contrast to many of our competitors (who are usually taking a pure request-reply based approach by stacking API calls) we can easily scale out to very large amounts of messages processed per second. *A little anecdote: even 'at rest' our system processes over 10.000 messages per second on a single machine, just because we can!*
+The more real time this information is the more valuable it becomes, often resulting in the desire to process millions of messages per second. When you can get more accurate information faster then your competition, you have a better shot at winning the race.
 
-Now lets have a look at what such a scenario often translates into in terms of our concepts.
+Real time information is hard though. But you don't have to worry about that, we'll handle it. In contrast to many of our competitors (who are usually taking a pure request-reply based approach by stacking API calls) we can easily scale out to very large amounts of messages processed per second. *A little anecdote: even 'at rest' our system processes over 10.000 messages per second, just because we can!*
+
+**Now lets have a look at what such a scenario often translates into in terms of our concepts.**
 
 ![MesssageHandler](/documentation/images/architecture-iot.png)
 
-For security reasons sensors are rarely directly attached to the internet, but make use of local field gateways to aggregate and secure the information stream before sending it over to the cloud for further processing. The reason for this is that most of those devices have very limited memory and cpu resources, as they want to run on batteries, and this prevents them from securing or encrypting their data. It is the role of the field gateway to make the local system secure. So on our end, we typically provision a secured **endpoint** per local field gateway instance, and not per sensor.
+For security reasons sensors are rarely directly attached to the internet, but make use of local field gateways to aggregate and secure the information stream before sending it over to the cloud for further processing. The reason for this is that most of those devices have very limited memory and cpu resources, as they want to run on batteries, and this prevents them from securing or encrypting their data, which requires quite a lot of power. It is the role of the field gateway to make the local system secure. So on our end, we typically provision a secured **endpoint** per local field gateway instance, and not per sensor.
 
 The endpoint directs the stream of messages coming from the field gateway to one or more **channels**, potentially hosted in different **environments**, for processing. Processing is done by **handlers** that typically perform one of the following tasks:
 
 * Reduce the message stream so that only relevant information for the use case at hand needs to be taken into account.
 * Store the information in the message stream, for later historical analyses using big data technology.
 * Perform aggregations on the message stream as humans can't interpret millions of data points per second.
-* Boundary checks and anomaly detection in real time, as that is what we humans are most interested in.
+* Boundary checks and anomaly detection in real time, as that is what we humans are mostly interested in.
 * Notify the relevant people or partner organisations in case some of these boundaries are exceeded.
 * And in some cases it is also desirable to automate the scenario completely, by sending commands back to the machine so that it can take preventive measures automatically.
 
-The general structure of this scenario is almost always the same, ingest as much information as possible, store it for later usage, but at the same time detect patterns and extract the interesting information & insights from it in real time, then forward those insights to people or machines that need to know about this information.
+The general structure of this scenario is almost always the same, ingest as much information as possible, store it for later usage, but at the same time detect patterns and extract the interesting information & insights in real time, then forward those insights to people or machines that need to know about it.
 
 ## Under the hood
 
