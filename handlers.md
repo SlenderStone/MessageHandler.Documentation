@@ -1,18 +1,18 @@
 # Handlers
 
-Handlers are the core processing unit in our system. Handlers look at each message that flows through a channel, determines whether it is interesting and then responds to it in any way it sees fit. Each message, means each message, including the ones it emits itself!
+Handlers are the processing units that make up your business logic. Handlers look at each message that flows through a channel, determine if they need to respond to it and then take the appropriate action if needed. 
+
+Roughly speaking, a handler consists of 2 pieces of code:
+
+* A standing query that continuously evaluates the message stream, flowing through the channel, in search of messages that it needs to respond to.
+* An action that triggers for each message that fulfils the criteria imposed by the query.
+
+In order to create handlers, you will need specific development skills. 
+
+* [Learn how to develop handlers](/documentation/developing-handlers)
+
+If you're not into software development, check out the gallery for existing handlers.
 
 ## Handlers in our gallery
 
- * [Average in period](/documentation/handlers/technical/average-in-period)
- * [Create Service Identity](/documentation/handlers/technical/create-service-identity)
- * [Forward To Signalr](/documentation/handlers/technical/forward-to-signalr)
- * [Forward To Smtp](/documentation/handlers/technical/forward-to-smtp)
- * [Generate Alert](/documentation/handlers/technical/generate-alert)
- * [Index Entity In Table Storage](/documentation/handlers/technical/index-entity-in-table-storage)
- * [Message To Blob Storage](/documentation/handlers/technical/message-to-blob-storage)
- * [Persist Claimset In Table Storage](/documentation/handlers/technical/persist-claimset-in-tablestorage)
- * [Persist Entity To Sql](/documentation/handlers/technical/persist-entity-to-sql)
- * [Perist Entity To Table Storage](/documentation/handlers/technical/persist-entity-to-table-storage)
- * [Route to Servicebus queue](/documentation/handlers/technical/route-to-servicebus-queue)  
- * [Subscribe To Mailchimp](/documentation/handlers/technical/subscribe-to-mailchimp)
+ * [Gallery](/handlers/gallery)
