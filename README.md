@@ -1,6 +1,6 @@
 # Getting started
 
-Welcome to [MessageHandler](http://www.messagehandler.net), the only online platform where you can collaborate on message processing logic. The goal of this platform is to work together with other people, who each are an expert in there field, and collectively build the 'Internet of Every Thing'. Our platform enables you to collect transmitted data in real time (messages), process this data into more valuable information (using your own or other's logic), and respond to the resulting information in any way that is appropriate (handle it). 
+Welcome to [MessageHandler](http://www.messagehandler.net), the only online platform where you can collaborate on message processing logic. The goal of this platform is to be a place where you can work together with other people, who each are an expert in their field, to collectively build the 'Internet of Every Thing'. Our platform enables you to collect transmitted data in real time (messages), process this data into more valuable information (using your own or other's logic), and respond to the resulting information in any way that is appropriate (handle it). 
 
 ![MesssageHandler](/documentation/images/messagehandler.png)
 
