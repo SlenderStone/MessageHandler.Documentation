@@ -5,25 +5,6 @@
 * [![Connectivity](https://www.messagehandler.net/images/left/connect.png?v=1.0.0.0)<span>Connectivity</span>](/documentation/connectivity)
 * [![Handlers](https://www.messagehandler.net/images/left/handlers.png?v=1.0.0.0)<span>Handlers</span>](/documentation/handlers)	
 * [![Developing handlers](https://www.messagehandler.net/images/left/develop.png?v=1.0.0.0)<span>Developing handlers</span>](/documentation/developing-handlers)
+* [![Smart Things](https://www.messagehandler.net/images/left/devices.png?v=1.0.0.0)<span>Developing handlers</span>](/documentation/devices)
+* [![Business Processes](https://www.messagehandler.net/images/left/devices.png?v=1.0.0.0)<span>Developing handlers</span>](/documentation/business)
 * [![How to contribute](https://www.messagehandler.net/images/left/contribute.png?v=1.0.0.0)<span>How to contribute</span>](/documentation/CONTRIBUTING)
-
-<!-- ### Basics
-*  [Messaging basics](/documentation/messaging/basics)
-*  [Processing basics](/documentation/messaging/basics)
-*  [Use cases](/documentation/messaging/usecases)
-*  [Message types](/documentation/messaging/types)
-*  [Exchange patterns](/documentation/messaging/exchangepatterns)
-*  [Processing patterns](/documentation/messaging/processingpatterns) -->
-<!-- ### Concepts
-*  [Handlers](/documentation/basics/handlers)
-*  [Channels](/documentation/basics/channels)
-*  [environments](/documentation/basics/handlers)
-*  [endpoints](/documentation/basics/handlers) -->
-<!-- *  [Testing your handler locally](/documentation/developing/local-testing)
-*  [Setting up an automated build](/documentation/developing/setting-up-automated-build)
-*  [Adding dynamic filtering](/documentation/developing/adding-dynamic-filtering)
-*  [Adding variables and templates](/documentation/developing/adding-variables-and-templates)
-*  [Running and diagnosing in the cloud](/documentation/developing/running-and-diagnosing-in-the-cloud) -->
-<!-- ### Composing Channels
-
-*  [Using te channel designer](/documentation/composing/using-the-channel-designer) -->
