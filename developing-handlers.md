@@ -10,7 +10,7 @@ In this series of articles we'll dive into the ins and outs of developing custom
 ## Learn the basics of handler development
 
  * [Setting up your repository & solution](/documentation/developing-handlers/setting-up-solution)
- * Create an automated build
+ * [Setting up an automated build](/documentation/developing-handlers/setting-up-build)
  * [Implementing a basic handler](/documentation/developing-handlers/implementing-basic-handler)
  * Unit testing handlers
  * Perform local integration tests
