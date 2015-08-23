@@ -6,7 +6,7 @@ Channels define how our system behaves in response to your messages. They determ
 
  * [Creating a new channel](/documentation/channels/creating)
  * [Adding handlers to your channel](/documentation/channels/adding-handlers)
- * Controlling message flow using filters
+ * Controlling message flow
  * Propagating message properties using templates
  * Making your channel more maintainable using variables
  * Visualizing the flow of your channel
