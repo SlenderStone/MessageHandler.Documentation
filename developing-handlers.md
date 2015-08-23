@@ -2,13 +2,18 @@
 
 In this series of articles we'll dive into the ins and outs of developing custom handlers. Custom handler development is a core feature of our platform. Not only will it let individual developers make, and sell, their message processing logic. But it also allows you to customize your channels in such a way that they will exactly fulfil your business needs and give you a competitive edge over the competition. 
 
+## Resources
+
+ * Package Feed: [https://www.myget.org/F/messagehandler/api/v2](https://www.myget.org/F/messagehandler/api/v2)
+ * Example handler implementation: [https://github.com/MessageHandler/MessageHandler.Handlers.AverageInPeriod](https://github.com/MessageHandler/MessageHandler.Handlers.AverageInPeriod)
+
 ## Learn the basics of handler development
 
- * [Setting up your solution](/documentation/developing-handlers/setting-up-solution)
+ * [Setting up your repository & solution](/documentation/developing-handlers/setting-up-solution)
+ * Create an automated build
  * [Implementing a basic handler](/documentation/developing-handlers/implementing-basic-handler)
  * Unit testing handlers
  * Perform local integration tests
- * Create an automated build
  * Perform integration tests in the cloud
  * Diagnosing potential issues with your handler
  
