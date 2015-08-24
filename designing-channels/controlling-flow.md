@@ -19,7 +19,7 @@ You can also do this in a non graphical manner
 
 ## Using filters
 
-Many handlers are equipped with dynamic filtering capabilities, often using a configuration property called `Trigger`. You can specify complex filters, using our templating engine, based on the mesage properties, to determine which messages will be taken into account by the handlers and which ones not. These expressions should evaluate as valid c# syntax, it's no rocket science though. Here is an example of such a filter: 
+Many handlers are equipped with dynamic filtering capabilities, often using a configuration property called `Trigger`. You can specify complex filters, using our template engine, based on the message properties, to determine which messages will be taken into account by the handlers and which ones not. These expressions should evaluate as valid c# syntax, it's no rocket science though. Here is an example of such a filter: 
 
 `message.AggregationMode == "Average" && (message.Amount < 18 || message.Amount > 27)`
 
