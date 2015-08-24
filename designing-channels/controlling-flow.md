@@ -18,3 +18,9 @@ You can also do this in a non graphical manner
  * Select the output subject of the handler(s) that you want to subscribe to and hit `Save`
 
 ## Using filters
+
+Many handlers are equipped with dynamic filtering capabilities, often using a configuration property called `Trigger`. You can specify complex filters, using our templating engine, based on the mesage properties, to determine which messages will be taken into account by the handlers and which ones not. These expressions should evaluate as valid c# syntax, it's no rocket science though. Here is an example of such a filter: `message.AggregationMode == "Average" && (message.Amount < 18 || message.Amount > 27)`
+
+## Using queries
+
+Handlers that don't offer filtering capabilities probably control the inflow of messages them selves, hard coded inside the handler using RX queries. This is the third way to control the flow, but it requires development skills and comes a little closer to rocket science as well. See [Implementing a basic handler](/documentation/developing-handlers/implementing-basic-handler) for more details on how to do this.
