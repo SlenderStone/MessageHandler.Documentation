@@ -8,7 +8,7 @@ There are multiple ways to control the message flow though.
 
 The easiest way to control the flow is by using so called subjects. Subjects are created by linking the input of one handler to the output of another, this will limit the message flow inbound for the second handler to just those messages that are outputted by the first.
 
-In the graph editor, you can do this by dragging the square on the right of a handler (output) to the left square on another (input).
+In the graph editor, you can do this by dragging the square on the right of a handler (output) to the left square on another (input). The resulting subject is displayed as an arrow pointing to the input.
 
 ![Subjects](/documentation/images/architecture-channel.png)
 
