@@ -8,6 +8,6 @@ There are multiple ways to control the message flow though.
 
 The easiest way to control the flow is by using so called subjects. Subjects are created by linking the input of one handler to the output of another, this will limit the message flow inbound for the second handler to just those messages that are outputted by the first.
 
-[Subjects](/documentation/images/architecture-channel.png)
+[!Subjects](/documentation/images/architecture-channel.png)
 
 ## Using filters
