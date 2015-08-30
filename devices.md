@@ -4,10 +4,10 @@ The world around is us getting more and more connected, things start communicati
 
 ## Microcontrollers
 
+* Arduino
 * NetMF
 * Windows 10 core
-* Raspbian
-* Yocto
+* Embedded Linux: Raspbian, Yocto
 
 ## Mobile platforms
 
