@@ -1,6 +1,6 @@
-# Connecting Windows 10 IoT Core with AMQP protocol
+# Connecting Windows 10 IoT Core using the AMQP protocol
 
-In this article we'll show you how you can use the AMQP protocol to connect to MessageHandler and send or receive messages to/from your channels.
+In this article you'll learn how you can use the AMQP protocol to connect to MessageHandler and send or receive messages to/from your channels.
 
 ## Preparation
 
@@ -17,11 +17,11 @@ Our gateway exposes Azure ServiceBus entities (Eventhub Publisher or Queue) in s
 
 From the Shared Access Signature you can derive the names of these entities and namespaces:
 
-* The namespace name can be extracted from the sr variable, it probably looks something like 
+* The namespace name can be extracted from the `sr` variable, it probably looks something like 
 
 	`messagehandler-gw-eu-west-X.servicebus.windows.net`
 
-* The entity name can also be extracted from the sr variable, for sending it looks similar to 
+* The entity name can also be extracted from the `sr` variable, for sending it looks similar to 
 
 	`mh-gw-eu-in-X\Publishers\EndpointId`
 	
@@ -31,7 +31,7 @@ From the Shared Access Signature you can derive the names of these entities and 
 
 ## Using AMQP Net Lite
 
-In order to do all the heavy lifting for the AMQP protocol, we can make use of the AMQPNetLite library. You can find it on nuget with a target for Universal Windows Applications, which is what windows 10 IoT apps are.
+In order to do all the heavy lifting for the AMQP protocol, you can make use of the AMQPNetLite library. You can find it on nuget with a target for Universal Windows Applications, which is what windows 10 IoT apps are.
 
 Execute the following command to install it.
 
@@ -39,13 +39,13 @@ Execute the following command to install it.
 
 ### Authentication
 
-Before we can send or receive messages, we need to authenticate on the AMQP resource exposed by our gateway. 
+Before you can send or receive messages, you need to authenticate on the AMQP resource exposed by our gateway. 
 
-Authenticating is done by sending an `put-token` message to a special queue called `$cbs` in the same namespace as the entity that we want to use. This operation creates a dynamic reply queue on the fly where your device can read it's authentication result from. 
+Authenticating is done by sending an `put-token` message to a special queue called `$cbs` in the same namespace as the entity that you want to use. This operation creates a dynamic reply queue on the fly where your device can read it's authentication result from. 
 
-The message that we must send needs to have the shared access signature passed in in the body part, as well as multiple specific properties and application properties set in order to do the validation. These properties include metadata that describes how the body should be interpreted (type sastoken) as well as the entity we would like to authenticate to.
+The message that you must send needs to have the shared access signature passed in in the body part, as well as multiple specific properties and application properties set in order to do the validation. These properties include metadata that describes how the body should be interpreted (type sastoken) as well as the entity you would like to authenticate to.
 
-Once the validation has occurred, we will be able to receive the authentication result on the dynamically created reply queue. We can check the `status-code` application property to know whether or not the authentication succeeded. However, behind the scenes some magic is going on as well. The authentication result will contain a claimset, which is automatically tracked by the connection and added to future messages, sent through that connection, automatically as well.
+Once the validation has occurred, you will be able to receive the authentication result on the dynamically created reply queue. You can check the `status-code` application property to know whether or not the authentication succeeded. However, behind the scenes some magic is going on as well. The authentication result will contain a claimset, which is automatically tracked by the connection and added to future messages, sent through that connection, automatically as well.
 
 The code required to authenticate looks like this:
 
@@ -97,7 +97,7 @@ The code required to authenticate looks like this:
 
 ### Sending
 
-In order to send a message we need to authenticate on the inbound entity first, in order to do that we need to establish a connection with the inbound namespace using AMQPS, specifying that the connection should get it's SaslProfile externally (this enables the code that will automagically pass the claimset around).
+In order to send a message you need to authenticate on the inbound entity first. To do that you need to establish a connection with the inbound namespace using AMQPS, specifying that the connection should get it's SaslProfile externally (this enables the code that will automagically pass the claimset around).
 
 	public void Send()
 	{
@@ -111,7 +111,7 @@ In order to send a message we need to authenticate on the inbound entity first, 
 		connection.Close();
 	}
 
-Once authenticated we can send messages to the inbound entity. The content should be embedded in the body section. The example code below sends a byte array, but the content type can be anything (depending on what your handlers can de-serialize).
+Once authenticated you can send messages to the inbound entity. The content should be embedded in the body section. The example code below sends a byte array, but the content type can be anything (depending on what your handlers can de-serialize).
 
 The entity that we use to allow devices to ingest messages into the system are so called EventHubs. These entities can process up to a million events per second, but they do so in a partitioned way. If you want your messages to arrive in the same order as sent, then you must set the `partition-key` to the same value for all messages coming from this device. You can use the `EndpointId` or some other device identifier for this.
 
@@ -148,3 +148,21 @@ The code to send a message looks like this:
 	}
 
 ### Receiving
+
+In order to receive a message you need to authenticate on the outbound entity first. To do that you need to establish a connection with the outbound namespace using AMQPS, again specifying that the connection should get it's SaslProfile externally.
+
+	public void Receive()
+	{
+		var address = new Address(outboundNamespace, 5671); //5671 = amqps, 5672 = amqp
+		var connection = new Connection(address, Amqp.Sasl.SaslProfile.External, null, null);
+
+		if (Authenticate(connection, outboundSignature, outboundEntity, outboundNamespace))
+		{
+			ReceiveMessage(connection, outboundEntity);
+		}
+		connection.Close();
+	}
+	
+Once authenticated you can open a receive link to start receiving from the queue that we provisioned for your endpoint and consume the message content. Note that receiving a message means that it becomes invisible on the queue, if you fail to process it in a certain time frame (30 seconds) then the message will reappear on the queue.
+
+If you can correctly process the message you must signal that you `Accept` the message, this will effectively remove the message from the queue. If your code intentionally wants to fail the processing of the message so that it reappears on the queue you can call `Reject`.
