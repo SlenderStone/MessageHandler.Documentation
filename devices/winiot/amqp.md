@@ -15,10 +15,19 @@ The information you need to gather from your endpoint configuration is the follo
 
 Our gateway exposes Azure ServiceBus entities (Eventhub Publisher or Queue) in specific Azure ServiceBus namespaces in order to fulfil the AMQP protocol requirement. Note that the namespace for sending and receiving are different! 
 
-From the Shared Access Signature you can derive the names of these entities and namespaces
+From the Shared Access Signature you can derive the names of these entities and namespaces:
 
-* The namespace name can be extracted from the sr variable, it probably looks something like `messagehandler-gw-eu-west-X.servicebus.windows.net`
-* The entity name can also be extracted from the sr variable, for sending it looks similar to `mh-gw-eu-in-X\Publishers\EndpointId`, for receive it's equal to `EndpointId`
+* The namespace name can be extracted from the sr variable, it probably looks something like 
+
+	`messagehandler-gw-eu-west-X.servicebus.windows.net`
+
+* The entity name can also be extracted from the sr variable, for sending it looks similar to 
+
+	`mh-gw-eu-in-X\Publishers\EndpointId`
+	
+  For receive it's equal to 
+  
+	`EndpointId`
 
 ## Using AMQP Net Lite
 
