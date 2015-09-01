@@ -1,4 +1,4 @@
-# Connecting Windows 10 IoT Core using the AMQP protocol
+# Connecting Windows 10 IoT Core Apps using AMQP
 
 In this article you'll learn how you can use the AMQP protocol to connect to MessageHandler and send or receive messages to/from your channels.
 
