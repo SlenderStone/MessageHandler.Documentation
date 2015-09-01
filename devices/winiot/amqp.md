@@ -39,11 +39,15 @@ Execute the following command to install it.
 
 ### Authentication
 
-Before we can send or receive messages, we need to authenticate on the AMQP resource exposed by our gateway. Authenticating is done by sending a message to a special queue called `$cbs` and a reply queue that is created on the fly for your device. 
+Before we can send or receive messages, we need to authenticate on the AMQP resource exposed by our gateway. 
 
-The need to send an authentication request to the `$cbs` queue. This message needs to have multiple specific properties and application properties set in order to do the validation. Once the validation is done, we get a reply message on the dynamically generated queue, for us to read and interpret.
+Authenticating is done by sending an `put-token` message to a special queue called `$cbs` in the same namespace as the entity that we want to use. This operation creates a dynamic reply queue on the fly where your device can read it's authentication result from. 
 
-The code looks like this
+The message that we must send needs to have the shared access signature passed in in the body part, as well as multiple specific properties and application properties set in order to do the validation. These properties include metadata that describes how the body should be interpreted (type sastoken) as well as the entity we would like to authenticate to.
+
+Once the validation has occurred, we will be able to receive the authentication result on the dynamically created reply queue. We can check the `status-code` application property to know whether or not the authentication succeeded. However, behind the scenes some magic is going on as well. The authentication result will contain a claimset, which is automatically tracked by the connection and added to future messages, sent through that connection, automatically as well.
+
+The code required to authenticate looks like this:
 
 	private bool Authenticate(Connection connection, string shareAccessSignature, string entity, string @namespace)
 	{
@@ -91,8 +95,56 @@ The code looks like this
 		return authenticationResult;
 	}
 
-
-
 ### Sending
+
+In order to send a message we need to authenticate on the inbound entity first, in order to do that we need to establish a connection with the inbound namespace using AMQPS, specifying that the connection should get it's SaslProfile externally (this enables the code that will automagically pass the claimset around).
+
+	public void Send()
+	{
+		var address = new Address(inboundNamespace, 5671); //5671 = amqps, 5672 = amqp
+		var connection = new Connection(address, Amqp.Sasl.SaslProfile.External, null, null);
+
+		if (Authenticate(connection, inboundSignature, inboundEntity, inboundNamespace))
+		{
+			SendMessage(connection, inboundEntity);
+		}
+		connection.Close();
+	}
+
+Once authenticated we can send messages to the inbound entity. The content should be embedded in the body section. The example code below sends a byte array, but the content type can be anything (depending on what your handlers can de-serialize).
+
+The entity that we use to allow devices to ingest messages into the system are so called EventHubs. These entities can process up to a million events per second, but they do so in a partitioned way. If you want your messages to arrive in the same order as sent, then you must set the `partition-key` to the same value for all messages coming from this device. You can use the `EndpointId` or some other device identifier for this.
+
+In order to re-authenticate your message when the MessageHandler gateway reads it from the eventhub, you need to pass in the inbound shared access signature again through the `Authorization` application header.
+
+Optionally you can also pass in additional headers that control how the routing logic operates. If you don't pass in this metadata, the gateway will forward your message to all authorized channels. But you can limit this if needed by passing in the `x-mh-channel` and/or `x-mh-environment` headers containing the identifiers of the respective channels & environments that you want to sent to (if authorized).
+
+The code to send a message looks like this:
+
+	private void SendMessage(Connection connection, string node)
+	{
+		Session session = new Session(connection);
+		SenderLink sender = new SenderLink(session, endpointId, node);
+		Message message = new Message()
+		{
+			BodySection = new Data()
+			{
+				Binary = Encoding.UTF8.GetBytes("content")
+			}
+		};
+
+		message.Properties = new Properties() { };
+		message.MessageAnnotations = new MessageAnnotations();
+		message.MessageAnnotations[new Symbol("x-opt-partition-key")] = endpointId;
+
+		message.ApplicationProperties = new ApplicationProperties();
+		message.ApplicationProperties["Authorization"] = inboundSignature;
+		message.ApplicationProperties["x-mh-channel"] = channelId;	
+
+		sender.Send(message);
+
+		sender.Close();
+		session.Close();
+	}
 
 ### Receiving
