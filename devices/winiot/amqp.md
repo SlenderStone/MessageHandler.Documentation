@@ -25,8 +25,8 @@ From the Shared Access Signature you can derive the names of these entities and 
 
 	`mh-gw-eu-in-X\Publishers\EndpointId`
 	
-  For receive it's equal to 
-  
+* The entity for receive it's equal to
+
 	`EndpointId`
 
 ## Using AMQP Net Lite
