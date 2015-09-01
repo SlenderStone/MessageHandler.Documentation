@@ -1,6 +1,6 @@
 # Connecting Windows 10 IoT Core Apps using AMQP
 
-In this article you'll learn how you can use the AMQP protocol to connect to MessageHandler and send or receive messages to/from your channels.
+In this article you'll learn how you can use the AMQP protocol to connect to MessageHandler and send or receive messages to or from your channels.
 
 ## Preparation
 
@@ -13,25 +13,25 @@ The information you need to gather from your endpoint configuration is the follo
 * Inbound Shared Access Signature
 * Outbound Shared Access Signature
 
-Our gateway exposes Azure ServiceBus entities (Eventhub Publisher or Queue) in specific Azure ServiceBus namespaces in order to fulfil the AMQP protocol requirement. Note that the namespace for sending and receiving are different! 
+Our gateway exposes Azure ServiceBus entities (Eventhub Publisher or Queue) in specific Azure ServiceBus namespaces in order to fulfil the AMQP protocol requirement. If you want to use the AMQP protocol directly, you will have to specify some of this Azure ServiceBus specific information. But luckily it can all be extracted from the Shared Access Signature values 
 
-From the Shared Access Signature you can derive the names of these entities and namespaces:
+From the Shared Access Signature you can derive the names of these entities and namespaces in the following ways:
 
-* The namespace name can be extracted from the `sr` variable, it probably looks something like 
+* The namespace name can be extracted from the `sr` variable, it probably looks something like the string value below. Note that the namespace for sending and receiving are different! 
 
 	`messagehandler-gw-eu-west-X.servicebus.windows.net`
 
-* The entity name can also be extracted from the `sr` variable, for sending it looks similar to 
+* The entity name can also be extracted from the `sr` variable, for the sending entity it looks similar to the following:
 
 	`mh-gw-eu-in-X\Publishers\EndpointId`
 	
-* The entity for receive it's equal to
+* The entity for receive it's equal to:
 
 	`EndpointId`
 
-## Using AMQP Net Lite
+## AMQP Net Lite
 
-In order to do all the heavy lifting for the AMQP protocol, you can make use of the AMQPNetLite library. You can find it on nuget with a target for Universal Windows Applications, which is what windows 10 IoT apps are.
+In order to do all the heavy lifting for the AMQP protocol, you can make use of the AMQPNetLite library. You can find it on [nuget](https://www.nuget.org/packages/AMQPNetLite/) and it has a target for Universal Windows Applications, which is what windows 10 IoT apps are under the hood.
 
 Execute the following command to install it.
 
