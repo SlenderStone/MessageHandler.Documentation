@@ -166,3 +166,19 @@ In order to receive a message you need to authenticate on the outbound entity fi
 Once authenticated you can open a receive link to start receiving from the queue that we provisioned for your endpoint and consume the message content. Note that receiving a message means that it becomes invisible on the queue, if you fail to process it in a certain time frame (30 seconds) then the message will reappear on the queue.
 
 If you can correctly process the message you must signal that you `Accept` the message, this will effectively remove the message from the queue. If your code intentionally wants to fail the processing of the message so that it reappears on the queue you can call `Reject`.
+
+	private void ReceiveMessage(Connection connection, string queue)
+	{
+		var session = new Session(connection);
+		var receiver = new ReceiverLink(session, queue, queue);
+
+		var message = receiver.Receive();
+
+		var body = message.Body;
+
+		receiver.Accept(message); // receiver.Reject(message); on error
+
+		// keep the receiver open to continue receiving
+		receiver.Close();
+		session.Close();
+	}
