@@ -2,7 +2,7 @@
 
 Welcome to [MessageHandler](http://www.messagehandler.net), the only online platform where you can collaborate on message processing logic. The goal of this platform is to be a place where companies and individuals, each an expert in their own field, can work together to collectively build the 'Internet of Every Thing'.
 
-The concept behind our platform is fairly straightforward. It starts with data that travels from a source to a destination. And while the messages travel components, designed for you by different parties, respond to the content within.
+The concept behind our platform is fairly straightforward. It starts with data that travels from an origin to a destination. And while the messages travel components, designed for you by different parties, react to the content within.
 
 ![MesssageHandler](/documentation/images/architecture-concepts.png)
 
