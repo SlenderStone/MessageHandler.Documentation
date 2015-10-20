@@ -8,7 +8,7 @@ Follow these steps to get up and running quickly.
 
  * [Sign in to create an account](/account/signin).
  * [Create a channel](/channels/add) to build your own processing logic or [select an existing channel from the gallery](/gallery/channels).
- * [Add handlers from the gallery](/gallery/handlers) to your channel, or [learn how to build your own] (/documentation/developing-handlers).
+ * [Add handlers from the gallery](/gallery/handlers) to your channel, or [learn how to build your own](/documentation/developing-handlers).
  * Deploy your channel to an environment of your choice.
  * [Assign an endpoint](/endpoints/new) to allow messages to flow into your channel.
  * [Connect](documentation/connectivity) your devices, websites, back end systems and so forth to get those messages flowing.
@@ -20,6 +20,7 @@ Check out our [full guide](/documentation/basics/guide) if you want to learn mor
 ## Notes
 
 This platform has been developed by and for engineers, this reflects itself in the User Experience. If you have suggestions on how to make the platform better and easier to use, do not hesitate to reach out.
+
 
 Happy Handling,
 
