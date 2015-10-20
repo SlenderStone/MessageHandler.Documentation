@@ -15,11 +15,12 @@ Follow these steps to get up and running quickly.
 
 ## Learn more
  
-[Check out our full guide if you want to learn more details about each step](/documentation/basics/guide)
+Check out our [full guide](/documentation/basics/guide) if you want to learn more details about each step
 
 ## Notes
 
 This platform has been developed by and for engineers, this reflects itself in the User Experience. If you have suggestions on how to make the platform better and easier to use, do not hesitate to reach out.
 
 Happy Handling,
+
 The MessageHandler Team
