@@ -14,8 +14,10 @@ Follow these steps to get up and running quickly.
  * [Connect](documentation/connectivity) your devices, websites, back end systems and so forth to get those messages flowing.
 
 ## Learn more
+
+![MesssageHandler](/documentation/images/architecture-concepts.png)
  
-Check out our [full guide](/documentation/basics/guide) if you want to learn more details about each step
+Check out our [full guide](/documentation/basics/guide), or [architectural overview](/documentation/architecture) if you want to learn more details about each of the steps outlined.
 
 ## Notes
 
