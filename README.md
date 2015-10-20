@@ -1,47 +1,25 @@
 # Getting started
 
-Welcome to [MessageHandler](http://www.messagehandler.net), the only online platform where you can collaborate on message processing logic. The goal of this platform is to be a place where you can work together with other people, who each are an expert in their field, to collectively build the 'Internet of Every Thing'. Our platform enables you to collect transmitted data in real time (messages), process this data into more valuable information (using your own or other's logic), and respond to the resulting information in any way that is appropriate (handle it). 
+Welcome to [MessageHandler](http://www.messagehandler.net), the only online platform where you can collaborate on message processing logic. The goal of this platform is to be a place where companies and individuals, each an expert in their own field, can work together to collectively build the 'Internet of Every Thing'. 
 
-![MesssageHandler](/documentation/images/messagehandler.png)
+## Quick start
 
-This section of the documentation provides links to all the resources that you need to start learning about our platform. Use the flow suggested in this document for the most effective learning path, but you can skip sections that you are already familiar with.
+Follow these steps to get up and running quickly.
 
-## Tell me more about messaging
+ * [Sign in to create an account](/account/signin).
+ * [Create a channel](/channels/add) to build your own processing logic or [select an existing channel from the gallery](/gallery/channels).
+ * [Add handlers from the gallery](/gallery/handlers) to your channel, or [learn how to build your own] (/documentation/developing-handlers).
+ * Deploy your channel to an environment of your choice.
+ * [Assign an endpoint](/endpoints/new) to allow messages to flow into your channel.
+ * [Connect](documentation/connectivity) your devices, websites, back end systems and so forth to get those messages flowing.
 
-To fully understand what our platform does and how to use it, you should understand the basics of messaging first.
-
- * [What is messaging?](/documentation/basics/what-is-messaging)
- * [What is messaging used for?](/documentation/basics/use-cases)
- * What are common message types?
- * What are common message exchange patterns?
- * What is message processing?
- * What are common message processing patterns?
+## Learn more
  
-## Tell me more about MessageHandler
+[Check out our full guide if you want to learn more details about each step](/documentation/basics/guide)
 
- * [What is a handler?](/documentation/handlers)
- * [What is a channel?](/documentation/channels)
- * What is an environment?
- * [What is an endpoint?](/documentation/connectivity)
- 
-## Get started with your first channel
+## Notes
 
- * Install a channel from the gallery
- * Customize existing channels
- 
-## Learn how to send data into your channel
+This platform has been developed by and for engineers, this reflects itself in the User Experience. If you have suggestions on how to make the platform better and easier to use, do not hesitate to reach out.
 
- * [How to send data using HTTP](/documentation/connectivity/http#sending)
- * [How to send data using AMQP](/documentation/connectivity/amqp#sending)
- * [How to send data using SignalR](/documentation/connectivity/signalr#sending)
- 
-## Learn how to receive messages from your channel
-
- * [How to receive messages using HTTP](/documentation/connectivity/http#receiving)
- * [How to receive messages using AMQP](/documentation/connectivity/amqp#receiving)
- * [How to receive messages using SignalR](/documentation/connectivity/signalr#receiving)
-
-## Advanced topics
- 
- * [Channel design](/documentation/designing-channels)
- * [Building handlers](/documentation/developing-handlers)
+Happy Handling,
+The MessageHandler Team
