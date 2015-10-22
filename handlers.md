@@ -10,4 +10,4 @@ Roughly speaking, a handler consists of 2 pieces of code:
 In order to create handlers, you will need specific development skills. If you're not into software development, check out the gallery for existing handlers
 
 * [Learn how to develop handlers](/documentation/developing-handlers)
-* [Check out the gallery for existing handlers](/handlers/gallery)
+* [Check out the gallery for existing handlers](/gallery/handlers)
