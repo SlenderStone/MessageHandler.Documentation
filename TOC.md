@@ -6,5 +6,6 @@
 * [![Developing handlers](https://www.messagehandler.net/images/left/develop.png?v=1.0.0.0)<span>Developing handlers</span>](/documentation/developing-handlers)
 * [![Smart Things](https://www.messagehandler.net/images/left/devices.png?v=1.0.0.0)<span>Smart Things</span>](/documentation/devices)
 * [![Business Processes](https://www.messagehandler.net/images/left/flow.png?v=1.0.0.0)<span>Business Processes</span>](/documentation/business)
-* [![Connectivity](https://www.messagehandler.net/images/left/connect.png?v=1.0.0.0)<span>Connectivity</span>](/documentation/connectivity)
+* [![Connectivity](https://www.messagehandler.net/images/left/recipes.png?v=1.0.0.0)<span>Connectivity</span>](/documentation/connectivity)
+* [![API Referene](https://www.messagehandler.net/images/left/connect.png?v=1.0.0.0)<span>API Reference</span>](/documentation/api)
 * [![How to contribute](https://www.messagehandler.net/images/left/contribute.png?v=1.0.0.0)<span>How to contribute</span>](/documentation/CONTRIBUTING)
