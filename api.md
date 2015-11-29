@@ -15,7 +15,7 @@ With the following header values
 <!-- start of code block -->
  
 	Accept: "application/json"
-	Content-type: application/json; charset=utf-8
+	Content-Type: "application/json; charset=utf-8"
     
 <!-- end of code block -->
 
@@ -32,7 +32,7 @@ In the body of the request you have to provide following content. You can find y
     
 <!-- end of code block -->
 
-The response of the authorization request will provide you an access_token which is valid for a limited amount of time (but can be refereshed). The response body format looks like this:
+The response of the authorization request will provide you an access_token which is valid for a limited amount of time (but can be refreshed). The response body format looks like this:
 
 <!-- start of code block -->
  
