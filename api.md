@@ -2,13 +2,13 @@
 
 This API reference is organized by common task. Each task may involve using one or more data representations and one or more operations. You can find these at the following base address:
 
-`http://api.messagehandler.net`
+`https://api.messagehandler.net`
 
 ## Getting an access token
 
 Many of the resources and operations on our API require authorization before they can be used. In order to authorize, you need to send a POST request to
 
-`http://api.messagehandler.net/authorize`
+`https://api.messagehandler.net/authorize`
 
 With the following header values
 
