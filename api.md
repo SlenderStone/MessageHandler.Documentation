@@ -50,7 +50,7 @@ The response of the authorization request will provide you an access_token which
 
 Once you have an access token, you need to pass that token into each subsequent request that requires authorization using the authorization header, specifying a Base64 encoded bearer value, like this:
 
-`Authorization: Bearer Base64Encode(access_token)`
+`Authorization: "Bearer Base64Encode(access_token)"`
 
 ## Common Tasks
 
