@@ -2,26 +2,21 @@
 
 Welcome to [MessageHandler](http://www.messagehandler.net), the only online platform where you can collaborate on message processing logic. 
 
-The goal of this platform is to be a place where companies and individuals, each an expert in their own field, can work together to collectively build the 'Internet of Every Thing'.
-
-The concepts behind our platform are fairly straightforward. It starts with data that travels from an origin to a destination. And while these messages travel, components of different types react to the content within. You can select components built by others, or build your own.
-
-![MesssageHandler](/documentation/images/architecture-concepts.png)
+This document is here to get you you started using the platform. If you are interested to learn more about the concepts and technology behind our platform, please refer to the [architecture section](/documentation/architecture)
 
 ## Quick start
 
 Follow these steps to get up and running quickly.
 
  * [Sign in to create an account](/account/signin).
- * [Create a channel](/channels/add) to build your own processing logic or [select an existing channel from the gallery](/gallery/channels).
- * [Add handlers from the gallery](/gallery/handlers) to your channel, or [learn how to build your own](/documentation/developing-handlers).
- * Deploy your channel to an environment of your choice.
- * [Assign an endpoint](/endpoints/new) to secure your channel, and allow messages to flow into it.
- * [Connect](documentation/connectivity) your devices, websites, back end systems and so forth to get your messages flowing.
+ * [Connect](documentation/connectivity) your devices, websites, back end systems and so forth to get some messages flowing.
+ * Learn how to process your messages while they flow through the system, either by [selecting an existing channel from the gallery](/gallery/channels) or [to build your own](/channels/add).
+ * If you have coding skills, you can also [learn how to build your own processing components](/documentation/developing-handlers) which you can then leverage in your designs or even sell on our marketplace.
 
+ 
 ## Learn more
  
-Check out our [full guide](/documentation/basics/guide), or [architectural overview](/documentation/architecture) if you want to learn more details about each of the steps outlined.
+If you want to learn more in depth details about each of the steps outlined above, check out our [full guide](/documentation/basics/guide), or [architectural overview](/documentation/architecture) .
 
 ## Notes
 
