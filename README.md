@@ -8,10 +8,10 @@ This document is here to get you you started using the platform. If you are inte
 
 Follow these steps to get up and running quickly.
 
- * [Sign in to create an account](/account/signin).
+ * [Sign in to create an account](/documentation/signin).
  * [Connect](documentation/connectivity) your devices, websites, back end systems and so forth to get some messages flowing.
- * Learn how to leverage channels, to process your messages while they flow through the system, either by [selecting an existing one from the gallery](/gallery/channels) or [by designing your own](/channels/add).
- * If you have coding skills, you can also [learn how to build your own processing components](/documentation/developing-handlers) which you can then leverage in your designs or even sell on our marketplace.
+ * Learn how to leverage channels, to process your messages while they flow through the system, either by [selecting an existing one from the gallery](/documentation/channels/installing-channels) or [by designing your own](/documentation/channels/designing-channels).
+ * If you have coding skills, you can also [learn how to build your own processing components](/documentation/handlers/developing-handlers) which you can then leverage in your designs or even sell on our marketplace.
 
  
 ## Learn more
