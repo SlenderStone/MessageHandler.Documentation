@@ -4,8 +4,8 @@ Channels are the core unit in MessageHandler. In essence they represent a specif
 
 Almost every administrative action taken inside MessageHandler is performed at the channel level: from configuration to deployment, to monitoring and sharing. If you want to get the most value out of MessageHandler it is important to learn:
 
- * [How channels operate internally](/documentation/designing-channels/channel-internals)
- * [How you can design channels yourself](/documentation/designing-channels)
+ * [How channels operate internally](/documentation/channels/channel-internals)
+ * [How you can design channels yourself](/documentation/channels/designing-channels)
  
 But of course you can also get started more quickly, instead of designing one yourself you can grab one from our gallery, our gallery already has a few recipes for channels designed by fellow community members, and ready for you to use.
 
