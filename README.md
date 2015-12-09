@@ -10,7 +10,7 @@ Follow these steps to get up and running quickly.
 
  * [Sign in to create an account](/documentation/account/create).
  * [Connect](/documentation/connectivity) your devices, websites, back end systems, social media stream, SAAS services and so much more to our system to get some messages flowing.
- * Learn how to leverage channels, to process your messages while they flow through the system, either by [selecting an existing one from the gallery](/documentation/channels/installing-channels) or [by designing your own](/documentation/channels/designing-channels).
+ * Learn how to leverage channels to process your messages while they flow through the system, either by [selecting an existing one from the gallery](/documentation/channels/installing-channels) or [by designing your own](/documentation/channels/designing-channels).
  * If you have coding skills, you can also [learn how to build your own processing components](/documentation/handlers/developing-handlers) which you can then leverage in your designs or even sell on our marketplace.
 
  
