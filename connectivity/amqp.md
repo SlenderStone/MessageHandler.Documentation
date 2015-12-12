@@ -2,7 +2,7 @@
 
 According to wikipedia: *"The Advanced Message Queuing Protocol (AMQP) is an open standard application layer protocol for message-oriented middleware. The defining features of AMQP are message orientation, queuing, routing (including point-to-point and publish-and-subscribe), reliability and security. AMQP is a binary, application layer protocol, designed to efficiently support a wide variety of messaging applications and communication patterns. It provides flow controlled, message-oriented communication with message-delivery guarantees such as at-most-once (where each message is delivered once or never), at-least-once (where each message is certain to be delivered, but may do so multiple times) and exactly-once (where the message will always certainly arrive and do so only once), and authentication and/or encryption based on SASL and/or TLS. It assumes an underlying reliable transport layer protocol such as Transmission Control Protocol (TCP)."*
 
-AMQP is our internal protocol of choice as it is extremely suitable for server to server messaging and has high reliability and security requirements. To learn more about AMQP itself, please refer to [the wikipedia document on Amqp](http://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol)
+AMQP is our internal protocol of choice as it is extremely suitable for server to server messaging and has high reliability and security requirements. To learn more about AMQP itself, please refer to [the wikipedia document on Amqp](http://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol).
 
 ## <a name="sending"></a>Sending messages
 
