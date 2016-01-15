@@ -27,4 +27,4 @@ The protocols supported above are limited to messages of up to 256Kb in size, if
  * [Claimcheck pattern](/documentation/connectivity/claimcheck) which provides you a valet key to a location where you can upload large message content in parallel blocks. This option is ideal for huge files like videos.
  * [File upload](/documentation/connectivity/files) where you upload large message content to as http body content and our infrastructure will handle the claimcheck pattern behind the scenes. Ideal for normal files (MB's).
  
-Note that in order to use the claimcheck pattern you need to accompany it with specific types of handlers that can [process files](/handlers/fileprocessors), that can optionally [stream the file content as messages](/handlers/streams). 
+Note that in order to use the claimcheck pattern you need to accompany it with specific types of handlers that can [process files](/documentation/handlers/fileprocessors), that can optionally [stream the file content as messages](/documentation/handlers/streams). 
