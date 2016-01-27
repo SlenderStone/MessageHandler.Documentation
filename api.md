@@ -55,3 +55,4 @@ Once you have an access token, you need to pass that token into each subsequent 
 ## Common Tasks
 
 * [Uploading a new handler package from your buildserver](/documentation/api/package)
+* [Registering a device](/documentation/api/deviceregistration)
