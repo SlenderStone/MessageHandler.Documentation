@@ -66,7 +66,7 @@ Once you have determined the correct values, you can again use a MessagingFactor
             TransportType = TransportType.Amqp
         });
 		
-		var client = factory.CreateQueueClient(endpointid);
+		var client = factory.CreateSubscriptionClient(endpointid);
 		
 		var batch = await client.ReceiveBatchAsync(1000, TimeSpan.FromSeconds(1));
 		var tokens = batch.Select(x => x.LockToken).ToArray();
