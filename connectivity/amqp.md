@@ -21,7 +21,7 @@ Once you have determined the correct values, you can use a MessagingFactory to e
 		var ns = "paste your endpoints namespace here";
 		var hubname = "paste your hubname here";
 		var endpointid = "paste your endpoint id here";
-		var sasToken = "paste your endpoint inbound sas token"
+		var sasToken = "paste your endpoint inbound sas token";
 		
 		var factory = MessagingFactory.Create(ServiceBusEnvironment.CreateServiceUri("sb", ns, ""), new MessagingFactorySettings
         {
@@ -60,10 +60,11 @@ Once you have determined the correct values, you can again use a MessagingFactor
 		var ns = "paste your endpoints namespace here";
 		var queuename = "paste your queue name here";
 		var endpointid = "paste your endpoint id here";
+		var sasToken = "paste your endpoint outbound sas token";
 		
 		var factory = MessagingFactory.Create(ServiceBusEnvironment.CreateServiceUri("sb", ns, ""), new MessagingFactorySettings
         {
-            TokenProvider = TokenProvider.CreateSharedAccessSignatureTokenProvider(sas),
+            TokenProvider = TokenProvider.CreateSharedAccessSignatureTokenProvider(sasToken),
             TransportType = TransportType.Amqp
         });
 		
