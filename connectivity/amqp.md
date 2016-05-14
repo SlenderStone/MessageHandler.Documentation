@@ -21,10 +21,11 @@ Once you have determined the correct values, you can use a MessagingFactory to e
 		var ns = "paste your endpoints namespace here";
 		var hubname = "paste your hubname here";
 		var endpointid = "paste your endpoint id here";
+		var sasToken = "paste your endpoint inbound sas token"
 		
 		var factory = MessagingFactory.Create(ServiceBusEnvironment.CreateServiceUri("sb", ns, ""), new MessagingFactorySettings
         {
-            TokenProvider = TokenProvider.CreateSharedAccessSignatureTokenProvider(sas),
+            TokenProvider = TokenProvider.CreateSharedAccessSignatureTokenProvider(sasToken),
             TransportType = TransportType.Amqp
         });
 
@@ -33,7 +34,7 @@ Once you have determined the correct values, you can use a MessagingFactory to e
         var message = "{ ... }";
 		
 		var data = new EventData(Encoding.UTF8.GetBytes(message)) { PartitionKey = endpointid };
-        data.Properties["Authorization"] = sas;
+        data.Properties["Authorization"] = sasToken;
 
         await client.SendAsync(data);
 
