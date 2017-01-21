@@ -1,4 +1,4 @@
-# Json
+# Dynamic Json
 
 The default serialization format for typed messages is JSON. 
 
