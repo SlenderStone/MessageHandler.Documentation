@@ -2,7 +2,7 @@
 
 In order to let your buildserver, or other tooling, upload a new package version of your handler into our system, it needs to perform an authorized POST request on the following uri:
 
-`https://api.messagehandler.net/handlers/definitions/package/{descriptionid}/{version}`
+`https://api.messagehandler.net/handlers/definitions/{definitionid}/{version}/package`
 
 with following headers
 
