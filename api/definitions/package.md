@@ -23,7 +23,7 @@ with following headers
 
 The body content must contain a zip file, which contains the binaries of your handler's build output (content of bin folder)
 
-## Response
+### Response
 
 <!-- start of code block -->
 
@@ -31,7 +31,7 @@ The body content must contain a zip file, which contains the binaries of your ha
 
 <!-- end of code block -->
 
-## Notes
+### Notes
 
 * **Versioning:** Each time you push a new package, the version number needs to be increased. The system will not allow you to overwrite existing versions.
 * **Review required:** Package content will require a review of one of our trusted reviewers before being accepted into the system, so a newly uploaded version may not immediately be available for usage.
