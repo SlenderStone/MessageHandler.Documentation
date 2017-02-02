@@ -1,4 +1,4 @@
-# API Reference : Environments
+# API Reference : Handler Configurations Deployed To Environment
 
 In order to perform queries for the handler configurations that are deployed in a given environment, send an authorized GET request on the following base uri:
 
