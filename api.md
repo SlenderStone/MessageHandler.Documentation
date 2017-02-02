@@ -1,8 +1,15 @@
 # API Reference
 
-This API reference is organized by common task. Each task may involve using one or more data representations and one or more operations. You can find these at the following base address:
+This API reference describes all the resources and operations available throught the MessageHandler API. You can find these at the following base address:
 
 `https://api.messagehandler.net`
+
+## Overview Resources
+
+* [Handler Definitions](/documentation/api/definitions)
+* [Environments](/documentation/api/environments)
+* [Variables](/documentation/api/variables)
+* [Endpoints](/documentation/api/endpoints)
 
 ## Getting an access token
 
@@ -52,9 +59,3 @@ Once you have an access token, you need to pass that token into each subsequent 
 
 `Authorization: "Bearer Base64Encode(access_token)"`
 
-## Api sections
-
-* [Handler Definitions](/documentation/api/definitions)
-* [Environments](/documentation/api/environments)
-* [Variables](/documentation/api/variables)
-* [Endpoints](/documentation/api/endpoints)
