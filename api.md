@@ -52,7 +52,9 @@ Once you have an access token, you need to pass that token into each subsequent 
 
 `Authorization: "Bearer Base64Encode(access_token)"`
 
-## Common Tasks
+## Api sections
 
-* [Uploading a new handler package from your buildserver](/documentation/api/package)
-* [Registering a device](/documentation/api/deviceregistration)
+* [Handler Definitions](/documentation/api/definitions)
+* [Environments](/documentation/api/environments)
+* [Variables](/documentation/api/variables)
+* [Endpoints](/documentation/api/endpoints)
