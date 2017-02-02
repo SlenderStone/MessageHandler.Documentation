@@ -1,5 +1,5 @@
 * [![Getting started](https://www.messagehandler.net/images/left/start.png?v=1.0.0.0)<span>Getting started</span>](/documentation/README)
-* [![Conceptual Architecture](https://www.messagehandler.net/images/left/architecture.png?v=1.0.0.0)<span>Architecture</span>](/documentation/architecture)
+* [![Conceptual Architecture](https://www.messagehandler.net/images/left/architecture.png?v=1.0.0.0)<span>Conceptual Architecture</span>](/documentation/architecture)
 <!--* [![Channels](https://www.messagehandler.net/images/left/channels.png?v=1.0.0.0)<span>Channels</span>](/documentation/channels)
 * [![Handlers](https://www.messagehandler.net/images/left/handlers.png?v=1.0.0.0)<span>Handlers</span>](/documentation/handlers)	
 * [![Connectivity](https://www.messagehandler.net/images/left/recipes.png?v=1.0.0.0)<span>Connectivity</span>](/documentation/connectivity)
