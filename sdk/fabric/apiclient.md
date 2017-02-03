@@ -10,6 +10,8 @@ tada
 | AuthorizedClient   | centered      |
 | ApiRequest         | are neat      |
 
+tada
+
 ## Requests
 
 tada
