@@ -16,12 +16,12 @@ The following request classes are available to pass into an `AuthorizedClient`
 
 | Class                           | Description   |
 | ------------------------------- | ------------- |
-| AuthorizationRequest            | right-aligned |
-| EnvironmentRequest              | are neat      |
-| EnvironmentsRequest             | are neat      |
-| HandlerConfigurationRequest     | are neat      |
-| HandlerConfigurationsRequest    | are neat      |
-| HandlerDefinitionRequest        | are neat      |
-| HandlerDefinitionsRequest       | are neat      |
-| RefreshTokenRequest             | are neat      |
-| VariablesRequest                | are neat      |
+| AuthorizationRequest            | Performs a request to obtain an access token, based on your client id and `client secret. |
+| RefreshTokenRequest             | Refreshes an access token based on the refresh token obtained through an `AuthorizationRequest`. |
+| EnvironmentRequest              | Gets the details of a specific environment.      |
+| EnvironmentsRequest             | List all environments that the requesting account has access to. |
+| HandlerConfigurationRequest     | Gets the configuration details of a specific handler deployed to a specific environment. |
+| HandlerConfigurationsRequest    | Gets the configuration details of all handlers deployed to a specific environment. |
+| HandlerDefinitionRequest        | Gets the definition of a specific handler. |
+| HandlerDefinitionsRequest       | Gets the definition of all handlers. |
+| VariablesRequest                | Gets the variables of a specific account, if authorized |
