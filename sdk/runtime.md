@@ -2,4 +2,4 @@
 
 * [Configuration](/documentation/sdk/runtime/configuration)
 * [Serialization](/documentation/sdk/runtime/serialization)
-* [Dynamic Json](/documentation/sdk/runtime/dynamic-json)
+* [Dynamic Json](/documentation/sdk/dynamic-json)
