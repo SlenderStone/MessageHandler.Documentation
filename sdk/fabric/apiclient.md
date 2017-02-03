@@ -1,20 +1,18 @@
 # API Client
 
-## Client
-
-tada
+The API client consists of the following foundational classes:
 
 | Class              | Description   |
 | ------------------ | ------------- |
 | Api                | right-aligned |
-| AuthorizedClient   | centered      |
 | ApiRequest         | are neat      |
+| AuthorizedClient   | centered      |
 
-tada
+Next to the foundational classes, it also offers a number of request implementations that make calling the REST api a breeze.
 
 ## Requests
 
-tada
+The following request classes are available to pass into an `AuthorizedClient`
 
 | Class                           | Description   |
 | ------------------------------- | ------------- |
