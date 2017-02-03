@@ -1,17 +1,23 @@
 # API Client
 
-## API
-## AuthorizedRequest
+## Client
+
+| Class              | Description   |
+| ------------------ | ------------- |
+| Api                | right-aligned |
+| AuthorizedClient   | centered      |
+| ApiRequest         | are neat      |
 
 ## Requests
-### AuthorizationRequest
-### RefreshTokenRequest
-### EnvironmentsRequest
 
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
+| Class                           | Description   |
+| ------------------------------- | ------------- |
+| AuthorizationRequest            | right-aligned |
+| EnvironmentRequest              | are neat      |
+| EnvironmentsRequest             | are neat      |
+| HandlerConfigurationRequest     | are neat      |
+| HandlerConfigurationsRequest    | are neat      |
+| HandlerDefinitionRequest        | are neat      |
+| HandlerDefinitionsRequest       | are neat      |
+| RefreshTokenRequest             | are neat      |
+| VariablesRequest                | are neat      |
