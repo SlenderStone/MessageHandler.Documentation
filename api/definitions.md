@@ -9,7 +9,7 @@ with following headers
 <!-- start of code block -->
  
 	Accept: "application/json"
-	Authorization: "Bearer Base64Encode(access_token)"
+	Authorization: "Bearer access_token"
     
 <!-- end of code block -->
 
