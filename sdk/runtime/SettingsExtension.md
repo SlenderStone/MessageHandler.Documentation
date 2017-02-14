@@ -1,7 +1,7 @@
 # SDK Reference : Settings Extension
 
 This documentation is meant for developers that want to build their own higher level frameworks on top of the MessageHandler Runtime.
-.
+
 ##Example
 
 This is a code example of how you can create a settings extension for the MessageHandler Runtime.
